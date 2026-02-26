@@ -1,5 +1,7 @@
 package abyssal.abyssal_domain;
 
+import abyssal.abyssal_domain.block.ModBlocks;
+import abyssal.abyssal_domain.item.ModItemGroups;
 import abyssal.abyssal_domain.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -12,6 +14,8 @@ public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     @Override
     public void onInitialize() {
 
+        ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
     }
 }
