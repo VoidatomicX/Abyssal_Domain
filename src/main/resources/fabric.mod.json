@@ -11,7 +11,7 @@
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "abyssal.abyssal_domain.client.Abyssal_domainDataGenerator"
+      "abyssal.abyssal_domain.datagen.AbyssaldomainDataGenerator"
     ],
     "client": [
       "abyssal.abyssal_domain.client.Abyssal_domainClient"
