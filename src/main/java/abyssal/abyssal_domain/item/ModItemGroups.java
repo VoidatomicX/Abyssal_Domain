@@ -22,6 +22,8 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                     entries.add(ModBlocks.Gilded_Ruby_Bricks);
                     entries.add(ModBlocks.Deepslate_Gilded_Block_Ore);
                     entries.add(ModBlocks.Gilded_Block_Ore);
+                    entries.add(ModBlocks.Gilded_Ruby_Bars);
+                    entries.add(ModItems.Gilded_Ruby_Sword);
 
                 }).build());
 
