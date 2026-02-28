@@ -3,6 +3,7 @@ package abyssal.abyssal_domain.item;
 import abyssal.abyssal_domain.Abyssal_domain;
 import abyssal.abyssal_domain.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -22,6 +23,9 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                     entries.add(ModBlocks.Gilded_Ruby_Bars);
                     entries.add(ModItems.Gilded_Ruby_Sword);
 
+                    ModBlocks.CHISELED_GILDED_RUBY_BLOCK_SET.addAllBlocksToEntries(entries);
+                    ModBlocks.BLOCK_GILDED_RUBY_SET.addAllBlocksToEntries(entries);
+                    ModBlocks.GILDE_RUBY_BRICKS.addAllBlocksToEntries(entries);
                 }).build());
 
 
