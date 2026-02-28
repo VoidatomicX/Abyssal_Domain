@@ -27,8 +27,6 @@ public class ModItems {
 
 
     private static void addItemsToIngredintTabItemGroup(FabricItemGroupEntries entries) {
-        entries.add(Gilded_Ruby);
-        entries.add(Raw_Gilded_Ruby);
     }
 
 

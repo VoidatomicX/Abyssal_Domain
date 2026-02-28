@@ -18,11 +18,17 @@ public class ModBlocks{
     public static final Block Block_Gilded_Ruby = registerBlock("block_gilded_ruby",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
 
+    public static final Block Chiseled_Gilded_Ruby_Block = registerBlock("chiseled_gilded_ruby_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
+
+    public static final Block Gilded_Ruby_Bricks = registerBlock("gilded_ruby_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
+
     public static final Block Deepslate_Gilded_Block_Ore = registerBlock("deepslate_gilded_block_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE).sounds(BlockSoundGroup.DEEPSLATE)));
 
     public static final Block Gilded_Block_Ore = registerBlock("gilded_block_ore",
-            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.DEEPSLATE)));
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.STONE)));
 
 
 

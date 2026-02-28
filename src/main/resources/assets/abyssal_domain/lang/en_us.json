@@ -2,5 +2,9 @@
   "item.abyssal_domain.gilded_ruby": "Gilded Ruby",
   "item.abyssal_domain.raw_gilded_ruby": "Raw Gilded Ruby",
   "block.abyssal_domain.block_gilded_ruby": "Block of Gilded Ruby",
+  "block.abyssal_domain.chiseled_gilded_ruby_block": "Chiseled Gilded Ruby",
+  "block.abyssal_domain.gilded_ruby_bricks": "Gilded Ruby Bricks",
+  "block.abyssal_domain.gilded_block_ore": "Gilded Ore",
+  "block.abyssal_domain.deepslate_gilded_block_ore": "Deepslate Gilded Ore ",
   "itemgroup.gilded": "Abyssal Domain"
 }
