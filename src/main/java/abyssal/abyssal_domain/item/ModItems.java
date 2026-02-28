@@ -1,6 +1,7 @@
 package abyssal.abyssal_domain.item;
 
 import abyssal.abyssal_domain.Abyssal_domain;
+import abyssal.abyssal_domain.item.custom.ParticleSwitcher;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -13,6 +14,8 @@ public class ModItems {
 
     public static final Item Gilded_Ruby = registerItem("gilded_ruby", new Item(new FabricItemSettings()));
     public static final Item Raw_Gilded_Ruby = registerItem("raw_gilded_ruby", new Item(new FabricItemSettings()));
+
+    public static final Item PARTICLE_SWITCHER = registerItem("particle_switcher", new ParticleSwitcher(new FabricItemSettings()));
 
 
     public static final Item Gilded_Ruby_Sword = registerItem("gilded_ruby_sword",
