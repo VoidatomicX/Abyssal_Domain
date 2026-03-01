@@ -4,7 +4,6 @@ import abyssal.abyssal_domain.Abyssal_domain;
 import abyssal.abyssal_domain.item.custom.FakeBorderSword;
 import abyssal.abyssal_domain.item.custom.FanOfUnyieldingWinds;
 import abyssal.abyssal_domain.item.custom.ParticleSwitcher;
-import abyssal.abyssal_domain.item.custom.TestGlint;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -44,7 +43,19 @@ public class ModItems {
             new FakeBorderSword(ToolMaterials.NETHERITE,2,2f, new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Sword = registerItem("gilded_ruby_sword",
-            new SwordItem(ToolMaterials.NETHERITE,2,2f, new FabricItemSettings()));
+            new SwordItem(ToolMaterials.NETHERITE,4,-2.4f, new FabricItemSettings()));
+
+    public static final Item Gilded_Ruby_Hoe = registerItem("gilded_ruby_hoe",
+            new HoeItem(ToolMaterials.NETHERITE,-3,0f, new FabricItemSettings()));
+
+    public static final Item Gilded_Ruby_Axe = registerItem("gilded_ruby_axe",
+            new AxeItem(ToolMaterials.NETHERITE,5,-2.9f, new FabricItemSettings()));
+
+    public static final Item Gilded_Ruby_Shovel = registerItem("gilded_ruby_shovel",
+            new ShovelItem(ToolMaterials.NETHERITE,1,-3f, new FabricItemSettings()));
+
+    public static final Item Gilded_Ruby_Pickaxe = registerItem("gilded_ruby_pickaxe",
+            new PickaxeItem(ToolMaterials.NETHERITE,1,-2.8f, new FabricItemSettings()));
 
 private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, new Identifier(Abyssal_domain.MOD_ID, name), item);
