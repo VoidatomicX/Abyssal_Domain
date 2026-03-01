@@ -32,7 +32,7 @@ public class ModBlocks{
             new NightLibStoneSet(
                     "abyssal_domain",
                     "chiseled_gilded_ruby_block",
-                    FabricBlockSettings.copyOf(Blocks.STONE),
+                    FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK),
                     BlockSetType.STONE
             );
 
@@ -40,7 +40,7 @@ public class ModBlocks{
             new NightLibStoneSet(
                     "abyssal_domain",
                     "block_gilded_ruby",
-                    FabricBlockSettings.copyOf(Blocks.STONE),
+                    FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK),
                     BlockSetType.STONE
             );
 
@@ -48,7 +48,7 @@ public class ModBlocks{
             new NightLibStoneSet(
                     "abyssal_domain",
                     "gilded_ruby_bricks",
-                    FabricBlockSettings.copyOf(Blocks.STONE),
+                    FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK),
                     BlockSetType.STONE
             );
 

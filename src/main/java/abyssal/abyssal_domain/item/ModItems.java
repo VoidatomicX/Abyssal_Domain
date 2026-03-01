@@ -19,9 +19,19 @@ public class ModItems {
 
 
     public static final Item Gilded_Ruby_Sword = registerItem("gilded_ruby_sword",
-            new SwordItem(ToolMaterials.NETHERITE,2,2f, new FabricItemSettings()));
+            new SwordItem(ToolMaterials.NETHERITE,4,-2.4f, new FabricItemSettings()));
 
+    public static final Item Gilded_Ruby_Hoe = registerItem("gilded_ruby_hoe",
+            new HoeItem(ToolMaterials.NETHERITE,-3,0f, new FabricItemSettings()));
 
+    public static final Item Gilded_Ruby_Axe = registerItem("gilded_ruby_axe",
+            new AxeItem(ToolMaterials.NETHERITE,5,-2.9f, new FabricItemSettings()));
+
+    public static final Item Gilded_Ruby_Shovel = registerItem("gilded_ruby_shovel",
+            new ShovelItem(ToolMaterials.NETHERITE,1,-3f, new FabricItemSettings()));
+
+    public static final Item Gilded_Ruby_Pickaxe = registerItem("gilded_ruby_pickaxe",
+            new PickaxeItem(ToolMaterials.NETHERITE,1,-2.8f, new FabricItemSettings()));
 
 
 
