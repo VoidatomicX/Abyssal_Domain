@@ -1,0 +1,39 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "abyssal_domain:item/terminus_est"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [90, 90, -43],
+			"translation": [0, 9.75, 3.25],
+			"scale": [1.58, 1.58, 0.93]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [90, 90, -134],
+			"translation": [0, 9.75, 3.25],
+			"scale": [1.58, 1.58, 0.93]
+		},
+		"firstperson_righthand": {
+			"rotation": [90, 90, -43],
+			"translation": [0, 8, 1.25],
+			"scale": [1.58, 1.58, 0.93]
+		},
+		"firstperson_lefthand": {
+			"rotation": [90, 90, -134],
+			"translation": [0, 8, 1.25],
+			"scale": [1.58, 1.58, 0.93]
+		},
+		"ground": {
+			"rotation": [90, 0, 0],
+			"translation": [0, -2.25, 0],
+			"scale": [1.47, 1.47, 1]
+		},
+		"gui": {
+			"translation": [0.25, 0.25, 0],
+			"scale": [1.07, 1.07, 1]
+		}
+	}
+}

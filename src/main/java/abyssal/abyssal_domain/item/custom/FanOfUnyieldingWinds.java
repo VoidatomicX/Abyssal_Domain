@@ -47,7 +47,7 @@ public class FanOfUnyieldingWinds extends Item {
                         .add(offsetX, offsetY, offsetZ);
                 world.addParticle(ParticleTypes.CLOUD, particlePos.x, particlePos.y, particlePos.z, look.x * 0.1, look.y * 0.1, look.z * 0.1);
             }
-            world.playSound(player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_BONE_MEAL_USE, SoundCategory.PLAYERS, 1.0F, 1.0F, false);
+            world.playSound(player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_SAND_BREAK, SoundCategory.PLAYERS, 1.0F, 1.0F, false);
         }
 
         player.swingHand(hand, true);

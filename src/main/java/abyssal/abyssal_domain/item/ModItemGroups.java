@@ -26,6 +26,8 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                     entries.add(ModItems.Gilded_Ruby_Pickaxe);
                     entries.add(ModItems.Gilded_Ruby_Shovel);
                     entries.add(ModItems.Gilded_Ruby_Hoe);
+                    entries.add(ModItems.Terminus_Est);
+                    entries.add(ModItems.FAN_OF_UNYIELDING_WINDS);
 
                     ModBlocks.CHISELED_GILDED_RUBY_BLOCK_SET.addAllBlocksToEntries(entries);
                     ModBlocks.BLOCK_GILDED_RUBY_SET.addAllBlocksToEntries(entries);

@@ -2,7 +2,7 @@ package abyssal.abyssal_domain.item.custom;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import nightlib.bases.NightLibGlintItem;
+//import nightlib.bases.NightLibGlintItem;
 
 //public class TestGlint extends NightLibGlintItem {
 

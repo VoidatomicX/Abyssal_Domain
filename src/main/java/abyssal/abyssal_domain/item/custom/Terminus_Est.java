@@ -13,11 +13,11 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
 
-public class FakeBorderSword extends SwordItem {
+public class Terminus_Est extends SwordItem {
 
     private static final int BORDER_RADIUS = 10;
 
-    public FakeBorderSword(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
+    public Terminus_Est(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
     }
 
