@@ -40,7 +40,7 @@ public class Abyssal_domainClient implements ClientModInitializer {
             double x = borderCenter.getX() + Math.cos(angle) * borderRadius + world.random.nextDouble() * 0.2;
             double z = borderCenter.getZ() + Math.sin(angle) * borderRadius + world.random.nextDouble() * 0.2;
             double y = borderCenter.getY() + 1.0 + world.random.nextDouble() * 2;
-            world.addParticle(ParticleTypes.END_ROD, x, y, z, 0, 0.05, 0);
+            world.addParticle(ParticleTypes.ELECTRIC_SPARK, x, y, z, 0, 0.05, 0);
         }
     }
 }
