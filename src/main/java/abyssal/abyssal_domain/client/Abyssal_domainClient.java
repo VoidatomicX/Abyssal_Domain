@@ -14,6 +14,9 @@ public class Abyssal_domainClient implements ClientModInitializer {
     private static BlockPos borderCenter;
     private static int borderRadius;
 
+
+
+
     @Override
     public void onInitializeClient() {
         ClientPlayNetworking.registerGlobalReceiver(ModPackets.FAKE_BORDER, (client, handler, buf, responseSender) -> {

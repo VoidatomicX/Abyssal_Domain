@@ -4,10 +4,7 @@ import abyssal.abyssal_domain.Abyssal_domain;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockSetType;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.WoodType;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -27,6 +24,15 @@ public class ModBlocks{
 
     public static final Block Gilded_Block_Ore = registerBlock("gilded_block_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.STONE)));
+
+    public static final Block Mini_Void = registerBlock("mini_void",
+            new Block(AbstractBlock.Settings.create().strength(2f).requiresTool().sounds(BlockSoundGroup.NETHERITE).nonOpaque()));
+
+    public static final Block Crepe_Myrtle_Leaves = registerBlock("crepe_myrtle_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_LEAVES).sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()));
+
+    public static final Block Crepe_Myrtle_Log = registerBlock("crepe_myrtle_log",
+            new Block(FabricBlockSettings.copyOf(Blocks.CHERRY_WOOD).sounds(BlockSoundGroup.CHERRY_WOOD)));
 
     public static final NightLibStoneSet CHISELED_GILDED_RUBY_BLOCK_SET =
             new NightLibStoneSet(
