@@ -1,9 +1,15 @@
 package abyssal.abyssal_domain.client;
 
+import abyssal.abyssal_domain.entity.ModEntities;
+import abyssal.abyssal_domain.entity.client.GoobichthyModel;
+import abyssal.abyssal_domain.entity.client.GoobichthysRenderer;
+import abyssal.abyssal_domain.entity.client.ModModelLayers;
 import abyssal.abyssal_domain.network.ModPackets;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.ParticleTypes;
@@ -19,6 +25,11 @@ public class Abyssal_domainClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+
+        EntityRendererRegistry.register(ModEntities.Goobichthys, GoobichthysRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.Goobichthys, GoobichthyModel::getTexturedModelData);
+
+
         ClientPlayNetworking.registerGlobalReceiver(ModPackets.FAKE_BORDER, (client, handler, buf, responseSender) -> {
             int x = buf.readInt();
             int y = buf.readInt();
@@ -35,6 +46,7 @@ public class Abyssal_domainClient implements ClientModInitializer {
             }
         });
     }
+
 
     private void renderCircularBorder(ClientWorld world, MinecraftClient client) {
         int steps = 80;
