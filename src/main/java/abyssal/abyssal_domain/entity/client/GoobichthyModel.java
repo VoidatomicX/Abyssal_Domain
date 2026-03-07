@@ -4,6 +4,7 @@
 
 package abyssal.abyssal_domain.entity.client;
 
+import abyssal.abyssal_domain.entity.animation.ModAnimations;
 import abyssal.abyssal_domain.entity.custom.GoobichthysEntity;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
@@ -37,7 +38,14 @@ public class GoobichthyModel<T extends GoobichthysEntity> extends SinglePartEnti
 	}
 	@Override
 	public void setAngles(GoobichthysEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.getPart().traverse().forEach(ModelPart::resetTransform);
+
+		this.animateMovement(ModAnimations.LANDMOVE, limbSwing, limbSwingAmount, 2f, 2.5f);
+
 	}
+
+
+
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
 		body.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);

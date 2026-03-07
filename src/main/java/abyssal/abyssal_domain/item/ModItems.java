@@ -1,6 +1,7 @@
 package abyssal.abyssal_domain.item;
 
 import abyssal.abyssal_domain.Abyssal_domain;
+import abyssal.abyssal_domain.entity.ModEntities;
 import abyssal.abyssal_domain.item.custom.Terminus_Est;
 import abyssal.abyssal_domain.item.custom.FanOfUnyieldingWinds;
 import abyssal.abyssal_domain.item.custom.ParticleSwitcher;
@@ -54,6 +55,11 @@ public class ModItems {
 
     public static final Item Gilded_Ruby_Pickaxe = registerItem("gilded_ruby_pickaxe",
             new PickaxeItem(ToolMaterials.NETHERITE,1,-2.8f, new FabricItemSettings()));
+
+    public static final Item Goobichthys_Spawn_Egg = registerItem("goobichthys_spawn_egg",
+            new SpawnEggItem(ModEntities.Goobichthys, 0xab6518,0x3b260f, new FabricItemSettings()));
+
+
 
 private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, new Identifier(Abyssal_domain.MOD_ID, name), item);

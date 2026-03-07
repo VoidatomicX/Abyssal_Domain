@@ -9,7 +9,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
 public class GoobichthysRenderer extends MobEntityRenderer<GoobichthysEntity, GoobichthyModel<GoobichthysEntity>> {
-    private static final Identifier TEXTURE = new Identifier(Abyssal_domain.MOD_ID, "textures/entity/goobichthys");
+    private static final Identifier TEXTURE = new Identifier(Abyssal_domain.MOD_ID, "textures/entity/goobichthys.png");
 
     public GoobichthysRenderer(EntityRendererFactory.Context context) {
         super(context, new GoobichthyModel<>(context.getPart(ModModelLayers.Goobichthys)),0.6f);

@@ -58,6 +58,15 @@ public class ModBlocks{
                     BlockSetType.STONE
             );
 
+    public static final NightLibWoodenSet Crepe_Myrtle_Planks =
+            new NightLibWoodenSet(
+                    "abyssal_domain",
+                    "crepe_myrtle_planks",
+                    FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS),
+                    WoodType.CHERRY,
+                    BlockSetType.CHERRY
+            );
+
     private static void addItemsToNaturalBlocksTabItemGroup(FabricItemGroupEntries entries) {
 
     }

@@ -2,6 +2,7 @@ package abyssal.abyssal_domain.item;
 
 import abyssal.abyssal_domain.Abyssal_domain;
 import abyssal.abyssal_domain.block.ModBlocks;
+import abyssal.abyssal_domain.entity.ModEntities;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.minecraft.item.ItemGroup;
@@ -31,6 +32,8 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                     entries.add(ModItems.Gilded_Ruby_Hoe);
                     entries.add(ModItems.Terminus_Est);
                     entries.add(ModItems.FAN_OF_UNYIELDING_WINDS);
+                    entries.add(ModItems.Goobichthys_Spawn_Egg);
+
 
                     ModBlocks.CHISELED_GILDED_RUBY_BLOCK_SET.addAllBlocksToEntries(entries);
                     ModBlocks.BLOCK_GILDED_RUBY_SET.addAllBlocksToEntries(entries);
