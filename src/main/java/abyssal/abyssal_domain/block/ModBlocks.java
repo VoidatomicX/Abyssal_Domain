@@ -25,17 +25,6 @@ public class ModBlocks{
     public static final Block Gilded_Block_Ore = registerBlock("gilded_block_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.STONE)));
 
-    public static final Block Block_Gilded_Ruby = registerBlock("block_gilded_ruby",
-            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
-
-    public static final Block Chiseled_Gilded_Ruby_Block = registerBlock("chiseled_gilded_ruby_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
-
-    public static final Block Gilded_Ruby_Bricks = registerBlock("gilded_ruby_bricks",
-            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
-
-
-//Crepe Myrtle Tree
     public static final Block Crepe_Myrtle_Leaves = registerBlock("crepe_myrtle_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_LEAVES).sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()));
 
@@ -43,51 +32,34 @@ public class ModBlocks{
             new Block(FabricBlockSettings.copyOf(Blocks.CHERRY_WOOD).sounds(BlockSoundGroup.CHERRY_WOOD)));
 
 //Gilded Ruby Blocks
-    public static final Block Gilded_Ruby_Stairs = registerBlock("gilded_ruby_stairs",
-            new StairsBlock(ModBlocks.Block_Gilded_Ruby.getDefaultState(), FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
-    public static final Block Gilded_Ruby_Slab = registerBlock("gilded_ruby_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
-
-    public static final Block Gilded_Ruby_Button = registerBlock("gilded_ruby_button",
-            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE), BlockSetType.IRON, 10, true));
-    public static final Block Gilded_Ruby_Pressure_Plate = registerBlock("gilded_ruby_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
-                    FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE), BlockSetType.IRON));
-
-    public static final Block Gilded_Ruby_Wall = registerBlock("gilded_ruby_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
+public static final NightLibStoneSet BLOCK_GILDED_RUBY =
+        new NightLibStoneSet(
+                "abyssal_domain",
+                "block_gilded_ruby",
+                FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK),
+                BlockSetType.STONE
+        );
 
 
     //Gilded Ruby Bricks
-    public static final Block Gilded_Ruby_Bricks_Stairs = registerBlock("gilded_ruby_bricks_stairs",
-            new StairsBlock(ModBlocks.Block_Gilded_Ruby.getDefaultState(), FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
-    public static final Block Gilded_Ruby_Bricks_Slab = registerBlock("gilded_ruby_bricks_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
 
-    public static final Block Gilded_Ruby_Bricks_Button = registerBlock("gilded_ruby_bricks_button",
-            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE), BlockSetType.IRON, 10, true));
-    public static final Block Gilded_Ruby_Bricks_Pressure_Plate = registerBlock("gilded_ruby_bricks_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
-                    FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE), BlockSetType.IRON));
-
-    public static final Block Gilded_Ruby_Bricks_Wall = registerBlock("gilded_ruby_bricks_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
-
+    public static final NightLibStoneSet GILDED_RUBY_BRICKS =
+            new NightLibStoneSet(
+                    "abyssal_domain",
+                    "gilded_ruby_bricks",
+                    FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK),
+                    BlockSetType.STONE
+            );
 
 //Chiseled Gilded Ruby Blocks
-    public static final Block Chiseled_Gilded_Ruby_Stairs = registerBlock("chiseled_gilded_ruby_stairs",
-            new StairsBlock(ModBlocks.Block_Gilded_Ruby.getDefaultState(), FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
-    public static final Block Chiseled_Gilded_Ruby_Slab = registerBlock("chiseled_gilded_ruby_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
+public static final NightLibStoneSet CHISELED_GILDED_RUBY_BLOCK =
+        new NightLibStoneSet(
+                "abyssal_domain",
+                "chiseled_gilded_ruby_block",
+                FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK),
+                BlockSetType.STONE
+        );
 
-    public static final Block Chiseled_Gilded_Ruby_Button = registerBlock("chiseled_gilded_ruby_button",
-            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE), BlockSetType.IRON, 10, true));
-    public static final Block Chiseled_Gilded_Ruby_Pressure_Plate = registerBlock("chiseled_gilded_ruby_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
-                    FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE), BlockSetType.IRON));
-
-    public static final Block Chiseled_Gilded_Ruby_Wall = registerBlock("chiseled_gilded_ruby_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
 
 
 

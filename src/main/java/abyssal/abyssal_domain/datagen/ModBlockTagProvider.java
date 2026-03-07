@@ -20,30 +20,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.Gilded_Block_Ore)
-                .add(ModBlocks.Block_Gilded_Ruby)
-                .add(ModBlocks.Chiseled_Gilded_Ruby_Block)
-                .add(ModBlocks.Gilded_Ruby_Bricks)
                 .add(ModBlocks.Gilded_Ruby_Bars)
                 .add(ModBlocks.Deepslate_Gilded_Block_Ore);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.Gilded_Block_Ore)
-                .add(ModBlocks.Block_Gilded_Ruby)
-                .add(ModBlocks.Chiseled_Gilded_Ruby_Block)
-                .add(ModBlocks.Gilded_Ruby_Bricks)
                 .add(ModBlocks.Gilded_Ruby_Bars)
                 .add(ModBlocks.Deepslate_Gilded_Block_Ore);
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
                 .add(ModBlocks.Deepslate_Gilded_Block_Ore);
-
-        getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(ModBlocks.Gilded_Ruby_Wall);
-
-        getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(ModBlocks.Gilded_Ruby_Bricks_Wall);
-
-        getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(ModBlocks.Chiseled_Gilded_Ruby_Wall);
     }
 }

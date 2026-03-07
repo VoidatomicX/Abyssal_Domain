@@ -9,6 +9,8 @@ import abyssal.abyssal_domain.util.BorderZoneManager;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.util.math.Vec3d;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,11 +24,26 @@ public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+
         FabricDefaultAttributeRegistry.register(ModEntities.Goobichthys, GoobichthysEntity.createGoobichthyAttributes());
 
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             BorderZoneManager.tick(server);
         });
 
+        ServerTickEvents.END_WORLD_TICK.register(world -> {
+            if (!world.getRegistryKey().getValue().getPath().equals("abyssal_dimension")) return;
+
+            world.iterateEntities().forEach(entity -> {
+                if (entity instanceof LivingEntity living) {
+
+                    Vec3d vel = living.getVelocity();
+
+                    if (!living.isOnGround()) {
+                        living.setVelocity(vel.x, vel.y + 0.04, vel.z);
+                    }
+                }
+            });
+        });
     }
 }

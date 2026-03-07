@@ -33,26 +33,11 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                     entries.add(ModItems.FAN_OF_UNYIELDING_WINDS);
                     entries.add(ModItems.Goobichthys_Spawn_Egg);
 
-                    entries.add(ModBlocks.Block_Gilded_Ruby);
-                    entries.add(ModBlocks.Gilded_Ruby_Stairs);
-                    entries.add(ModBlocks.Gilded_Ruby_Slab);
-                    entries.add(ModBlocks.Gilded_Ruby_Button);
-                    entries.add(ModBlocks.Gilded_Ruby_Pressure_Plate);
-                    entries.add(ModBlocks.Gilded_Ruby_Wall);
+                    ModBlocks.BLOCK_GILDED_RUBY.addAllBlocksToEntries(entries);
 
-                    entries.add(ModBlocks.Gilded_Ruby_Bricks);
-                    entries.add(ModBlocks.Gilded_Ruby_Bricks_Stairs);
-                    entries.add(ModBlocks.Gilded_Ruby_Bricks_Slab);
-                    entries.add(ModBlocks.Gilded_Ruby_Bricks_Button);
-                    entries.add(ModBlocks.Gilded_Ruby_Bricks_Pressure_Plate);
-                    entries.add(ModBlocks.Gilded_Ruby_Bricks_Wall);
+                    ModBlocks.GILDED_RUBY_BRICKS.addAllBlocksToEntries(entries);
 
-                    entries.add(ModBlocks.Chiseled_Gilded_Ruby_Block);
-                    entries.add(ModBlocks.Chiseled_Gilded_Ruby_Stairs);
-                    entries.add(ModBlocks.Chiseled_Gilded_Ruby_Slab);
-                    entries.add(ModBlocks.Chiseled_Gilded_Ruby_Button);
-                    entries.add(ModBlocks.Chiseled_Gilded_Ruby_Pressure_Plate);
-                    entries.add(ModBlocks.Chiseled_Gilded_Ruby_Wall);
+                    ModBlocks.CHISELED_GILDED_RUBY_BLOCK.addAllBlocksToEntries(entries);
 
                 }).build());
 
