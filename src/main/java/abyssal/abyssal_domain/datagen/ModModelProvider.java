@@ -47,5 +47,10 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.Gilded_Ruby, Models.GENERATED);
         itemModelGenerator.register(ModItems.Raw_Gilded_Ruby, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.Gilded_Ruby_Pickaxe, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.Gilded_Ruby_Axe, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.Gilded_Ruby_Hoe, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.Gilded_Ruby_Shovel, Models.HANDHELD);
     }
 }

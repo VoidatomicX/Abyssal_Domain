@@ -42,19 +42,19 @@ public class ModItems {
             new Terminus_Est(ToolMaterials.NETHERITE,5,-3.3f, new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Sword = registerItem("gilded_ruby_sword",
-            new SwordItem(ToolMaterials.NETHERITE,4,-2.4f, new FabricItemSettings()));
+            new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Hoe = registerItem("gilded_ruby_hoe",
-            new HoeItem(ToolMaterials.NETHERITE,-3,0f, new FabricItemSettings()));
+            new HoeItem(ModToolMaterial.GILDEDRUBY,-3,0f, new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Axe = registerItem("gilded_ruby_axe",
-            new AxeItem(ToolMaterials.NETHERITE,5,-2.9f, new FabricItemSettings()));
+            new AxeItem(ModToolMaterial.GILDEDRUBY,5,-2.9f, new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Shovel = registerItem("gilded_ruby_shovel",
-            new ShovelItem(ToolMaterials.NETHERITE,1,-3f, new FabricItemSettings()));
+            new ShovelItem(ModToolMaterial.GILDEDRUBY,1,-3f, new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Pickaxe = registerItem("gilded_ruby_pickaxe",
-            new PickaxeItem(ToolMaterials.NETHERITE,1,-2.8f, new FabricItemSettings()));
+            new PickaxeItem(ModToolMaterial.GILDEDRUBY,1,-2.8f, new FabricItemSettings()));
 
     public static final Item Goobichthys_Spawn_Egg = registerItem("goobichthys_spawn_egg",
             new SpawnEggItem(ModEntities.Goobichthys, 0xab6518,0x3b260f, new FabricItemSettings()));
