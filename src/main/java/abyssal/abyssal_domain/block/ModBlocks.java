@@ -34,6 +34,8 @@ public class ModBlocks{
     public static final Block Gilded_Ruby_Bricks = registerBlock("gilded_ruby_bricks",
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
 
+
+//Crepe Myrtle Tree
     public static final Block Crepe_Myrtle_Leaves = registerBlock("crepe_myrtle_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_LEAVES).sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()));
 
