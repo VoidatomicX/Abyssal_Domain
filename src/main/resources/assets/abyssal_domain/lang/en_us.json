@@ -9,29 +9,6 @@
   "block.abyssal_domain.gilded_block_ore": "Gilded Ore",
   "block.abyssal_domain.deepslate_gilded_block_ore": "Deepslate Gilded Ore ",
   "block.abyssal_domain.gilded_ruby_bars": "Gilded Ruby Bars ",
-  "itemgroup.gilded": "Abyssal Domain",
+  "itemgroup.gilded": "Abyssal Domain"
 
-
-
-  "block.abyssal_domain.block_gilded_ruby_button": "Gilded Ruby Button",
-  "block.abyssal_domain.block_gilded_ruby_door": "Gilded Ruby Door",
-  "block.abyssal_domain.block_gilded_ruby_fence": "Gilded Ruby Fence",
-  "block.abyssal_domain.block_gilded_ruby_fence_gate": "Gilded Ruby Fence Gate",
-  "block.abyssal_domain.block_gilded_ruby_planks": "Gilded Ruby Planks",
-  "block.abyssal_domain.block_gilded_ruby_pressure_plate": "Gilded Ruby Pressure Plate",
-  "block.abyssal_domain.block_gilded_ruby_sign": "Gilded Ruby Sign",
-  "block.abyssal_domain.block_gilded_ruby_slab": "Gilded Ruby Slab",
-  "block.abyssal_domain.block_gilded_ruby_stairs": "Gilded Ruby Stairs",
-  "block.abyssal_domain.block_gilded_ruby_trapdoor": "Gilded Ruby Trapdoor",
-  "block.abyssal_domain.chiseled_gilded_ruby_block_button": "Chiseled Gilded Ruby Button",
-  "block.abyssal_domain.chiseled_gilded_ruby_block_door": "Chiseled Gilded Ruby Door",
-  "block.abyssal_domain.chiseled_gilded_ruby_block_fence": "Chiseled Gilded Ruby Fence",
-  "block.abyssal_domain.chiseled_gilded_ruby_block_fence_gate": "Chiseled Gilded Ruby Fence Gate",
-  "block.abyssal_domain.chiseled_gilded_ruby_block_planks": "Chiseled Gilded Ruby Planks",
-  "block.abyssal_domain.chiseled_gilded_ruby_block_pressure_plate": "Chiseled_gilded_ruby_block Pressure Plate",
-  "block.abyssal_domain.chiseled_gilded_ruby_block_sign": "Chiseled Gilded Ruby Sign",
-  "block.abyssal_domain.chiseled_gilded_ruby_block_slab": "Chiseled Gilded Ruby Slab",
-  "block.abyssal_domain.chiseled_gilded_ruby_block_stairs": "Chiseled Gilded Ruby Stairs",
-  "block.abyssal_domain.chiseled_gilded_ruby_block_trapdoor": "Chiseled Gilded Ruby Trapdoor",
-  "block.nightlib.full_rotatable_block": "Full Rotatable Block"
 }

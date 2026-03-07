@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "abyssal_domain:block/crepe_myrtle_log"
-  }
-}
