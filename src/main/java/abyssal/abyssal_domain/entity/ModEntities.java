@@ -11,7 +11,13 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModEntities {
-    public static final EntityType<GoobichthysEntity> Goobichthys = Registry.register(Registries.ENTITY_TYPE,
-            new Identifier(Abyssal_domain.MOD_ID,"goobichthys"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, GoobichthysEntity::new).dimensions(EntityDimensions.fixed(1f,1f)).build());
+    public static final EntityType<GoobichthysEntity> GOOBICHTHYS =
+            Registry.register(
+                    Registries.ENTITY_TYPE,
+                    new Identifier(Abyssal_domain.MOD_ID,"goobichthys"),
+                    FabricEntityTypeBuilder.create(
+                            SpawnGroup.CREATURE,
+                            GoobichthysEntity::new
+                    ).dimensions(EntityDimensions.fixed(1f,1f)).build()
+            );
 }
