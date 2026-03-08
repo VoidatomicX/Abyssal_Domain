@@ -1,4 +1,4 @@
-package abyssal.abyssal_domain.entity.custom.goals;
+/* package abyssal.abyssal_domain.entity.custom.goals;
 
 import abyssal.abyssal_domain.entity.custom.GoobichthysEntity;
 import net.minecraft.entity.LivingEntity;
@@ -51,4 +51,4 @@ public class GoobAmbushGoal extends Goal {
             goob.setTarget(husk);
         }
     }
-}
+}*/

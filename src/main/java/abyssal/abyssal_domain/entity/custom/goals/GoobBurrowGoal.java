@@ -1,4 +1,4 @@
-package abyssal.abyssal_domain.entity.custom.goals;
+/* package abyssal.abyssal_domain.entity.custom.goals;
 
 import abyssal.abyssal_domain.entity.custom.GoobichthysEntity;
 import net.minecraft.entity.ai.goal.Goal;
@@ -29,4 +29,4 @@ public class GoobBurrowGoal extends Goal {
         goob.setInvisible(false);
         goob.setNoGravity(false);
     }
-}
+}*/

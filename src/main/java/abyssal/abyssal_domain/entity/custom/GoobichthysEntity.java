@@ -85,7 +85,7 @@ public class GoobichthysEntity extends AnimalEntity {
 
     @Override
     public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return ModEntities.Goobichthys.create(world);
+        return ModEntities.GOOBICHTHYS.create(world);
     }
 
     @Override

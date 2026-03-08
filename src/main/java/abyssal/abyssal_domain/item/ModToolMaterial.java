@@ -6,7 +6,7 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    GILDEDRUBY(4, 2025, 4.5f, 3.5f, 26,
+    GILDEDRUBY(5, 2025, 4.5f, 3.5f, 26,
             () -> Ingredient.ofItems(ModItems.Gilded_Ruby));
 
     private final int mininiglevel;
