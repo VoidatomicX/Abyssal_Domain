@@ -60,6 +60,7 @@ public class GoobichthysEntity extends TameableEntity {
         super(entityType, world);
     }
 
+
     @Override
     protected void initDataTracker() {
         super.initDataTracker();
