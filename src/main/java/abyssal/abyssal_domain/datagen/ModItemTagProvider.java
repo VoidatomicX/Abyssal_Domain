@@ -16,10 +16,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.Crepe_Myrtle_PLANKS.planks.asItem());
 
-getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
         .add(ModBlocks.Crepe_Myrtle_Log.asItem())
         .add(ModBlocks.Crepe_Myrtle_Wood.asItem())
+        .add(ModBlocks.Crepe_Myrtle_PLANKS.planks.asItem())
         .add(ModBlocks.Stripped_Crepe_Myrtle_Log.asItem())
         .add(ModBlocks.Stripped_Crepe_Myrtle_Wood.asItem());
 

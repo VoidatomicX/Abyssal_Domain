@@ -55,6 +55,7 @@ public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Crepe_Myrtle_Wood, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Stripped_Crepe_Myrtle_Log, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Stripped_Crepe_Myrtle_Wood, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Crepe_Myrtle_PLANKS.planks, 5, 5);
 
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Crepe_Myrtle_Leaves, 30, 60);
 

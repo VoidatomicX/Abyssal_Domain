@@ -5,7 +5,7 @@ import net.minecraft.client.render.entity.animation.AnimationHelper;
 import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 
-public class ModAnimations {
+public class GoobichthysAnimations {
     public static final Animation WAH = Animation.Builder.create(1.125f).looping()
             .addBoneAnimation("body",
                     new Transformation(Transformation.Targets.TRANSLATE,

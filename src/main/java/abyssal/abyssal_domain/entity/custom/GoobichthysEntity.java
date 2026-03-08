@@ -53,6 +53,7 @@ public class GoobichthysEntity extends AnimalEntity {
         }
     }
 
+
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
@@ -74,6 +75,10 @@ public class GoobichthysEntity extends AnimalEntity {
                 .add(EntityAttributes.GENERIC_MAX_HEALTH,12)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2f)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE,4);
+    }
+
+    public boolean isOnFire() {
+        return false;
     }
 
     @Override

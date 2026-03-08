@@ -33,6 +33,8 @@ public class Abyssal_domainClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.Goobichthys, GoobichthyModel::getTexturedModelData);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Crepe_Myrtle_Leaves, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Crepe_Myrtle_PLANKS.door, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Crepe_Myrtle_PLANKS.trapdoor, RenderLayer.getCutout());
 
 
         ClientPlayNetworking.registerGlobalReceiver(ModPackets.FAKE_BORDER, (client, handler, buf, responseSender) -> {

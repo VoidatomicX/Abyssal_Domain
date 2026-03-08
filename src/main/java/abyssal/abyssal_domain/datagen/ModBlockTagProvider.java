@@ -35,6 +35,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.Crepe_Myrtle_Log)
                 .add(ModBlocks.Crepe_Myrtle_Wood)
+                .add(ModBlocks.Crepe_Myrtle_PLANKS.planks)
                 .add(ModBlocks.Stripped_Crepe_Myrtle_Log)
                 .add(ModBlocks.Stripped_Crepe_Myrtle_Wood);
     }
