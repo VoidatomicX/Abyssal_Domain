@@ -77,9 +77,6 @@ public class GoobichthysEntity extends AnimalEntity {
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE,4);
     }
 
-    public boolean isOnFire() {
-        return false;
-    }
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
