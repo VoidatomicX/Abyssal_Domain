@@ -9,6 +9,8 @@ import abyssal.abyssal_domain.util.BorderZoneManager;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.Vec3d;
 import org.slf4j.Logger;
@@ -45,5 +47,16 @@ public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
                 }
             });
         });
+
+        StrippableBlockRegistry.register(ModBlocks.Crepe_Myrtle_Log, ModBlocks.Stripped_Crepe_Myrtle_Log);
+        StrippableBlockRegistry.register(ModBlocks.Crepe_Myrtle_Wood, ModBlocks.Stripped_Crepe_Myrtle_Wood);
+
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Crepe_Myrtle_Log, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Crepe_Myrtle_Wood, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Stripped_Crepe_Myrtle_Log, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Stripped_Crepe_Myrtle_Wood, 5, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Crepe_Myrtle_Leaves, 30, 60);
+
     }
 }

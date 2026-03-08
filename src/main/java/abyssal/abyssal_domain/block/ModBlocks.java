@@ -25,14 +25,42 @@ public class ModBlocks{
     public static final Block Gilded_Block_Ore = registerBlock("gilded_block_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.STONE)));
 
+
+
+//Crêpe Myrtle Tree
+
+    public static final Block Crepe_Myrtle_Log = registerBlock("crepe_myrtle_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_WOOD).sounds(BlockSoundGroup.CHERRY_WOOD)));
+
+    public static final Block Crepe_Myrtle_Wood = registerBlock("crepe_myrtle_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_WOOD).sounds(BlockSoundGroup.CHERRY_WOOD)));
+
+    public static final Block Stripped_Crepe_Myrtle_Wood = registerBlock("stripped_crepe_myrtle_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_WOOD).sounds(BlockSoundGroup.CHERRY_WOOD)));
+    public static final Block Stripped_Crepe_Myrtle_Log = registerBlock("stripped_crepe_myrtle_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_WOOD).sounds(BlockSoundGroup.CHERRY_WOOD)));
+
     public static final Block Crepe_Myrtle_Leaves = registerBlock("crepe_myrtle_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_LEAVES).sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()));
 
-    public static final Block Crepe_Myrtle_Log = registerBlock("crepe_myrtle_log",
-            new Block(FabricBlockSettings.copyOf(Blocks.CHERRY_WOOD).sounds(BlockSoundGroup.CHERRY_WOOD)));
 
-//Gilded Ruby Blocks
-public static final NightLibStoneSet BLOCK_GILDED_RUBY =
+
+
+    public static final NightLibWoodenSet Crepe_Myrtle_PLANKS =
+            new NightLibWoodenSet(
+                    "abyssal_domain",
+                    "crepe_myrtle_planks",
+                    FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS),
+                    WoodType.CHERRY,
+                    BlockSetType.CHERRY
+            );
+
+
+
+
+    //Gilded Ruby Blocks
+
+    public static final NightLibStoneSet BLOCK_GILDED_RUBY =
         new NightLibStoneSet(
                 "abyssal_domain",
                 "block_gilded_ruby",

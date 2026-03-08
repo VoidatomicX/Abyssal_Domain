@@ -20,9 +20,9 @@ public class FanOfUnyieldingWinds extends Item {
 
     private static final double RANGE = 5.0;
     private static final double KNOCKBACK = 1.2;
-    private static final int MAX_CHARGES = 3;
+    private static final int MAX_CHARGES = 4;
     private static final int RECHARGE_TICKS = 100; // 5 seconds
-    private static final int COOLDOWN_TICKS = 20;  // 1 second
+    private static final int COOLDOWN_TICKS = 0;  // 1 second
 
     public FanOfUnyieldingWinds(Settings settings) {
         super(settings);

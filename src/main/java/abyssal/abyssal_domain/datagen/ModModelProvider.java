@@ -19,6 +19,16 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+
+
+
+
+        blockStateModelGenerator.registerLog(ModBlocks.Crepe_Myrtle_Log).log(ModBlocks.Crepe_Myrtle_Log).wood(ModBlocks.Crepe_Myrtle_Wood);
+        blockStateModelGenerator.registerLog(ModBlocks.Stripped_Crepe_Myrtle_Log).log(ModBlocks.Stripped_Crepe_Myrtle_Log).wood(ModBlocks.Stripped_Crepe_Myrtle_Wood);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.Crepe_Myrtle_Leaves);
+
+
+
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {

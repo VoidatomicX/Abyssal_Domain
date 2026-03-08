@@ -25,6 +25,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.Gilded_Block_Ore, copperLikeOreDrops(ModBlocks.Gilded_Block_Ore, ModItems.Raw_Gilded_Ruby));
         addDrop(ModBlocks.Deepslate_Gilded_Block_Ore, copperLikeOreDrops(ModBlocks.Gilded_Block_Ore, ModItems.Raw_Gilded_Ruby));
+
+        addDrop(ModBlocks.Crepe_Myrtle_Log);
+        addDrop(ModBlocks.Crepe_Myrtle_Wood);
+        addDrop(ModBlocks.Stripped_Crepe_Myrtle_Log);
+        addDrop(ModBlocks.Stripped_Crepe_Myrtle_Wood);
+
+
+        addDrop(ModBlocks.Crepe_Myrtle_Leaves, leavesDrops(ModBlocks.Crepe_Myrtle_Leaves, ModBlocks.Gilded_Ruby_Bars, 0.0025f));
     }
     public LootTable.Builder copperLikeOreDrops(Block drop, Item item) {
         return dropsWithSilkTouch(drop, this.applyExplosionDecay(drop,

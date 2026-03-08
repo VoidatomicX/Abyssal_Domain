@@ -18,7 +18,7 @@ public class Terminus_Est extends SwordItem {
 
     private static final int BORDER_RADIUS = 10;
     private static final int COOLDOWN_TICKS = 20; // 1 second
-    private static final int RECHARGE_TICKS = 1200; // 1 minute = 60s * 20 ticks
+    private static final int RECHARGE_TICKS = 3200; // 1 minute = 60s * 20 ticks
 
     public Terminus_Est(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);

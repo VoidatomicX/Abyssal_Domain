@@ -21,8 +21,6 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                     entries.add(ModItems.Raw_Gilded_Ruby);
                     entries.add(ModBlocks.Deepslate_Gilded_Block_Ore);
                     entries.add(ModBlocks.Gilded_Block_Ore);
-                    entries.add(ModBlocks.Crepe_Myrtle_Leaves);
-                    entries.add(ModBlocks.Crepe_Myrtle_Log);
                     entries.add(ModBlocks.Gilded_Ruby_Bars);
                     entries.add(ModItems.Gilded_Ruby_Sword);
                     entries.add(ModItems.Gilded_Ruby_Axe);
@@ -38,6 +36,14 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                     ModBlocks.GILDED_RUBY_BRICKS.addAllBlocksToEntries(entries);
 
                     ModBlocks.CHISELED_GILDED_RUBY_BLOCK.addAllBlocksToEntries(entries);
+
+                    entries.add(ModBlocks.Crepe_Myrtle_Leaves);
+                    entries.add(ModBlocks.Crepe_Myrtle_Log);
+                    entries.add(ModBlocks.Crepe_Myrtle_Wood);
+                    entries.add(ModBlocks.Stripped_Crepe_Myrtle_Log);
+                    entries.add(ModBlocks.Stripped_Crepe_Myrtle_Wood);
+
+                    ModBlocks.Crepe_Myrtle_PLANKS.addAllBlocksToEntries(entries);
 
                 }).build());
 

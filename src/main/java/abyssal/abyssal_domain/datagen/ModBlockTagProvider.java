@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
@@ -30,5 +31,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
                 .add(ModBlocks.Deepslate_Gilded_Block_Ore);
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.Crepe_Myrtle_Log)
+                .add(ModBlocks.Crepe_Myrtle_Wood)
+                .add(ModBlocks.Stripped_Crepe_Myrtle_Log)
+                .add(ModBlocks.Stripped_Crepe_Myrtle_Wood);
     }
 }

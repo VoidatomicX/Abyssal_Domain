@@ -28,7 +28,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 0.7f, 200, "gildedruby");
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.Gilded_Ruby, RecipeCategory.DECORATIONS,
-                ModBlocks.GILDED_RUBY_BRICKS.base);
+                ModBlocks.BLOCK_GILDED_RUBY.base);
 
 
 
