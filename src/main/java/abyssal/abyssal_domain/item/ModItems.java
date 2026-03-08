@@ -2,6 +2,7 @@ package abyssal.abyssal_domain.item;
 
 import abyssal.abyssal_domain.Abyssal_domain;
 import abyssal.abyssal_domain.entity.ModEntities;
+import abyssal.abyssal_domain.item.custom.GoobBucketItem;
 import abyssal.abyssal_domain.item.custom.Terminus_Est;
 import abyssal.abyssal_domain.item.custom.FanOfUnyieldingWinds;
 import abyssal.abyssal_domain.item.custom.ParticleSwitcher;
@@ -33,6 +34,12 @@ public class ModItems {
      //       (TestGlint) registerItem("red_glint",
      //               new TestGlint(0xFF0000));
 
+    public static final Item GOOB_BUCKET = Registry.register(
+            Registries.ITEM,
+            new Identifier(Abyssal_domain.MOD_ID,"goob_bucket"),
+            new GoobBucketItem(new Item.Settings().maxCount(1))
+    );
+
     public static final Item FAN_OF_UNYIELDING_WINDS = registerItem(
             "fan_of_unyielding_winds",
             new FanOfUnyieldingWinds(new FabricItemSettings().maxCount(1))
@@ -57,7 +64,7 @@ public class ModItems {
             new PickaxeItem(ModToolMaterial.GILDEDRUBY,1,-2.8f, new FabricItemSettings()));
 
     public static final Item Goobichthys_Spawn_Egg = registerItem("goobichthys_spawn_egg",
-            new SpawnEggItem(ModEntities.Goobichthys, 0xab6518,0x3b260f, new FabricItemSettings()));
+            new SpawnEggItem(ModEntities.GOOBICHTHYS, 0xab6518,0x3b260f, new FabricItemSettings()));
 
 
 

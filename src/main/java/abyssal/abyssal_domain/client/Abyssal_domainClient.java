@@ -29,7 +29,7 @@ public class Abyssal_domainClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        EntityRendererRegistry.register(ModEntities.Goobichthys, GoobichthysRenderer::new);
+        EntityRendererRegistry.register(ModEntities.GOOBICHTHYS, GoobichthysRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.Goobichthys, GoobichthyModel::getTexturedModelData);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Crepe_Myrtle_Leaves, RenderLayer.getCutout());

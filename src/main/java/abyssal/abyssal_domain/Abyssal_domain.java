@@ -6,6 +6,7 @@ import abyssal.abyssal_domain.entity.custom.GoobichthysEntity;
 import abyssal.abyssal_domain.item.ModItemGroups;
 import abyssal.abyssal_domain.item.ModItems;
 import abyssal.abyssal_domain.util.BorderZoneManager;
+import abyssal.abyssal_domain.util.ModSpawns;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -26,8 +27,9 @@ public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        ModSpawns.register();
 
-        FabricDefaultAttributeRegistry.register(ModEntities.Goobichthys, GoobichthysEntity.createGoobichthyAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.GOOBICHTHYS, GoobichthysEntity.createGoobichthyAttributes());
 
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             BorderZoneManager.tick(server);
