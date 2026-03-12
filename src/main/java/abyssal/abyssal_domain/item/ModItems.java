@@ -51,6 +51,12 @@ public class ModItems {
     public static final Item Gilded_Ruby_Sword = registerItem("gilded_ruby_sword",
             new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
 
+    public static final Item Oraxia = registerItem("oraxia",
+            new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
+
+    public static final Item Voruna = registerItem("voruna",
+            new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
+
     public static final Item Gilded_Ruby_Hoe = registerItem("gilded_ruby_hoe",
             new HoeItem(ModToolMaterial.GILDEDRUBY,-3,0f, new FabricItemSettings()));
 

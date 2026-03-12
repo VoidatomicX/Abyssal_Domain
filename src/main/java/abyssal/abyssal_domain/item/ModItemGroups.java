@@ -30,6 +30,8 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                     entries.add(ModItems.Terminus_Est);
                     entries.add(ModItems.FAN_OF_UNYIELDING_WINDS);
                     entries.add(ModItems.Goobichthys_Spawn_Egg);
+                    entries.add(ModItems.Oraxia);
+                    entries.add(ModItems.Voruna);
 
                     ModBlocks.BLOCK_GILDED_RUBY.addAllBlocksToEntries(entries);
 
