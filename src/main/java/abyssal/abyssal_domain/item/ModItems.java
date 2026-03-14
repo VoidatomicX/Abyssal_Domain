@@ -2,10 +2,8 @@ package abyssal.abyssal_domain.item;
 
 import abyssal.abyssal_domain.Abyssal_domain;
 import abyssal.abyssal_domain.entity.ModEntities;
-import abyssal.abyssal_domain.item.custom.GoobBucketItem;
-import abyssal.abyssal_domain.item.custom.Terminus_Est;
-import abyssal.abyssal_domain.item.custom.FanOfUnyieldingWinds;
-import abyssal.abyssal_domain.item.custom.ParticleSwitcher;
+import abyssal.abyssal_domain.item.custom.*;
+import abyssal.abyssal_domain.item.custom.trident.Oraxia;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -49,10 +47,10 @@ public class ModItems {
             new Terminus_Est(ToolMaterials.NETHERITE,5,-3.3f, new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Sword = registerItem("gilded_ruby_sword",
-            new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
+            new SwordItem(ToolMaterials.NETHERITE,4,-2.4f, new FabricItemSettings()));
 
     public static final Item Oraxia = registerItem("oraxia",
-            new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
+            new Oraxia(new FabricItemSettings()));
 
     public static final Item Voruna = registerItem("voruna",
             new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
