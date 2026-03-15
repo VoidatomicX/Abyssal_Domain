@@ -7,6 +7,7 @@ import abyssal.abyssal_domain.item.ModItemGroups;
 import abyssal.abyssal_domain.item.ModItems;
 import abyssal.abyssal_domain.util.BorderZoneManager;
 import abyssal.abyssal_domain.util.ModSpawns;
+import abyssal.abyssal_domain.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -60,6 +61,8 @@ public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Crepe_Myrtle_PLANKS.planks, 5, 5);
 
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.Crepe_Myrtle_Leaves, 30, 60);
+
+        ModWorldGeneration.generateModWorldGen();
 
     }
 }
