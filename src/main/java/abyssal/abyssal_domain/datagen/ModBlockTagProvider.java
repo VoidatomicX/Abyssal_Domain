@@ -28,14 +28,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.Gilded_Ruby_Bars)
                 .add(ModBlocks.Deepslate_Gilded_Block_Ore);
 
-        getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")))
-                .add(ModBlocks.Deepslate_Gilded_Block_Ore)
-                .add(ModBlocks.Gilded_Block_Ore);
-
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.Crepe_Myrtle_Log)
                 .add(ModBlocks.Crepe_Myrtle_Wood)
                 .add(ModBlocks.Crepe_Myrtle_PLANKS.planks)
+                .add(ModBlocks.Stripped_Crepe_Myrtle_Log)
+                .add(ModBlocks.Stripped_Crepe_Myrtle_Wood);
+
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.Crepe_Myrtle_Log)
+                .add(ModBlocks.Crepe_Myrtle_Wood)
                 .add(ModBlocks.Stripped_Crepe_Myrtle_Log)
                 .add(ModBlocks.Stripped_Crepe_Myrtle_Wood);
     }

@@ -4,6 +4,7 @@ import abyssal.abyssal_domain.Abyssal_domain;
 import abyssal.abyssal_domain.entity.ModEntities;
 import abyssal.abyssal_domain.item.custom.*;
 import abyssal.abyssal_domain.item.custom.trident.Oraxia;
+import abyssal.abyssal_domain.item.custom.trident.Voruna;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -53,7 +54,7 @@ public class ModItems {
             new Oraxia(new FabricItemSettings()));
 
     public static final Item Voruna = registerItem("voruna",
-            new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
+            new Voruna( new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Hoe = registerItem("gilded_ruby_hoe",
             new HoeItem(ModToolMaterial.GILDEDRUBY,-3,0f, new FabricItemSettings()));
