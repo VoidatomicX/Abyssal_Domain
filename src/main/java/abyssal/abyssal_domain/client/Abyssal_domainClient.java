@@ -12,8 +12,10 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
@@ -35,6 +37,8 @@ public class Abyssal_domainClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Crepe_Myrtle_Leaves, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Crepe_Myrtle_PLANKS.door, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Crepe_Myrtle_PLANKS.trapdoor, RenderLayer.getCutout());
+
+        EntityRendererRegistry.register(ModEntities.Oraxia_Projectile, FlyingItemEntityRenderer::new);
 
 
         ClientPlayNetworking.registerGlobalReceiver(ModPackets.FAKE_BORDER, (client, handler, buf, responseSender) -> {
