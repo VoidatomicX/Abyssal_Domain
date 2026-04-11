@@ -50,6 +50,9 @@ public class ModItems {
     public static final Item Gilded_Ruby_Sword = registerItem("gilded_ruby_sword",
             new SwordItem(ToolMaterials.NETHERITE,4,-2.4f, new FabricItemSettings()));
 
+    public static final Item Scythe = registerItem("scythe",
+            new Scythe(ToolMaterials.NETHERITE,4,-2.4f, new FabricItemSettings()));
+
     public static final Item Oraxia = registerItem("oraxia",
             new OraxiaItem(new FabricItemSettings()));
 

@@ -5,6 +5,7 @@ import abyssal.abyssal_domain.entity.ModEntities;
 import abyssal.abyssal_domain.entity.client.GoobichthyModel;
 import abyssal.abyssal_domain.entity.client.GoobichthysRenderer;
 import abyssal.abyssal_domain.entity.client.ModModelLayers;
+import abyssal.abyssal_domain.item.ModItems;
 import abyssal.abyssal_domain.network.ModPackets;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -14,10 +15,15 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.world.ClientWorld;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 
 public class Abyssal_domainClient implements ClientModInitializer {
@@ -38,7 +44,28 @@ public class Abyssal_domainClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Crepe_Myrtle_PLANKS.door, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Crepe_Myrtle_PLANKS.trapdoor, RenderLayer.getCutout());
 
-        EntityRendererRegistry.register(ModEntities.Oraxia_Projectile, FlyingItemEntityRenderer::new);
+        ModelPredicateProviderRegistry.register(
+                ModItems.Scythe,
+                new Identifier("abyssal_domain", "enchant_type"),
+                (stack, world, entity, seed) -> {
+                    var enchants = EnchantmentHelper.get(stack);
+
+                    if (enchants.isEmpty()) return 0.0f;
+                    var enchant = enchants.keySet().iterator().next();
+                    Identifier id = Registries.ENCHANTMENT.getId(enchant);
+
+                    if (id == null) return 0.0f;
+
+
+                    return switch (id.toString()) {
+                        case "minecraft:fire_aspect" -> 1.0f;
+                        case "minecraft:sharpness" -> 2.0f;
+                        case "minecraft:knockback" -> 3.0f;
+                        default -> 0.0f;
+                    };
+                }
+        );
+
 
 
         ClientPlayNetworking.registerGlobalReceiver(ModPackets.FAKE_BORDER, (client, handler, buf, responseSender) -> {
@@ -57,6 +84,7 @@ public class Abyssal_domainClient implements ClientModInitializer {
             }
         });
     }
+
 
 
     private void renderCircularBorder(ClientWorld world, MinecraftClient client) {

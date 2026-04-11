@@ -32,6 +32,7 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                     entries.add(ModItems.Goobichthys_Spawn_Egg);
                     entries.add(ModItems.Oraxia);
                     entries.add(ModItems.Voruna);
+                    entries.add(ModItems.Scythe);
 
                     ModBlocks.BLOCK_GILDED_RUBY.addAllBlocksToEntries(entries);
 
