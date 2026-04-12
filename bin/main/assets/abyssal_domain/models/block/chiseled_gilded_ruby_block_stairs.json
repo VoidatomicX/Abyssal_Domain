@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "abyssal_domain:block/chiseled_gilded_ruby_block",
+    "side": "abyssal_domain:block/chiseled_gilded_ruby_block",
+    "top": "abyssal_domain:block/chiseled_gilded_ruby_block"
+  }
+}

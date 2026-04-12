@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "abyssal_domain:block/gilded_ruby_bricks"
+  }
+}

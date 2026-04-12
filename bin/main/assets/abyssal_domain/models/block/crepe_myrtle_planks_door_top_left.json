@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "textures": {
+    "bottom": "abyssal_domain:block/crepe_myrtle_planks_door_bottom",
+    "top": "abyssal_domain:block/crepe_myrtle_planks_door_top"
+  }
+}

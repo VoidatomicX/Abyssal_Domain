@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "abyssal_domain:block/chiseled_gilded_ruby_block"
+  }
+}

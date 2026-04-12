@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "abyssal_domain:block/gilded_ruby_bricks"
+  }
+}

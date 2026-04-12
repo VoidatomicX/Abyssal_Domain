@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "abyssal_domain:gilded_ruby"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "RRR",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "abyssal_domain:gilded_ruby_pickaxe"
+  },
+  "show_notification": true
+}

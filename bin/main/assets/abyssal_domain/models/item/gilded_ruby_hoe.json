@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "abyssal_domain:item/gilded_ruby_hoe"
+  }
+}

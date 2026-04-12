@@ -28,22 +28,35 @@ public class BorderZone {
         return dx * dx + dz * dz <= radius * radius;
     }
 
-    public void enforce(ServerPlayerEntity player1Entity, ServerPlayerEntity player2Entity) {
+    public void enforce(ServerPlayerEntity p1, ServerPlayerEntity p2) {
         if (!active) return;
 
-        if (!player1Entity.isAlive() || !player2Entity.isAlive() ||
-                !player1Entity.getWorld().equals(player2Entity.getWorld())) {
+        if (!p1.isAlive() || !p2.isAlive() ||
+                !p1.getWorld().equals(p2.getWorld())) {
             active = false;
             return;
         }
 
-        if (!contains(player1Entity)) teleportInside(player1Entity);
-        if (!contains(player2Entity)) teleportInside(player2Entity);
+        if (!contains(p1)) teleportInside(p1);
+        if (!contains(p2)) teleportInside(p2);
     }
 
     private void teleportInside(ServerPlayerEntity player) {
-        Vec3d dir = player.getPos().subtract(center.getX(), player.getY(), center.getZ()).normalize();
-        Vec3d newPos = new Vec3d(center.getX(), player.getY(), center.getZ()).add(dir.multiply(radius - 0.5));
+        Vec3d dir = player.getPos()
+                .subtract(center.getX(), player.getY(), center.getZ());
+
+        if (dir.lengthSquared() < 0.001) {
+            dir = new Vec3d(1, 0, 0);
+        } else {
+            dir = dir.normalize();
+        }
+
+        Vec3d newPos = new Vec3d(
+                center.getX(),
+                player.getY(),
+                center.getZ()
+        ).add(dir.multiply(radius - 0.5));
+
         player.requestTeleport(newPos.x, newPos.y, newPos.z);
     }
 

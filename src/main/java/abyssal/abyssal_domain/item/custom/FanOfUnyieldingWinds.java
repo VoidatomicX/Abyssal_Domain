@@ -1,5 +1,7 @@
 package abyssal.abyssal_domain.item.custom;
 
+import abyssal.abyssal_domain.enchants.ModEnchantments;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -20,6 +22,7 @@ public class FanOfUnyieldingWinds extends Item {
 
     private static final double RANGE = 5.0;
     private static final double KNOCKBACK = 1.2;
+    private static final double SELFKNOCKBACK = 0.2;
     private static final int MAX_CHARGES = 4;
     private static final int RECHARGE_TICKS = 100; // 5 seconds
     private static final int COOLDOWN_TICKS = 0;  // 1 second
@@ -27,6 +30,8 @@ public class FanOfUnyieldingWinds extends Item {
     public FanOfUnyieldingWinds(Settings settings) {
         super(settings);
     }
+
+
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
@@ -58,7 +63,15 @@ public class FanOfUnyieldingWinds extends Item {
         NbtCompound nbt = stack.getOrCreateNbt();
         int charges = nbt.getInt("Charges");
 
-        // Block usage if no charges or item on cooldown
+        // Get enchant level
+        int level = EnchantmentHelper.getLevel(ModEnchantments.GUST, stack);
+
+        // Scaling values
+        float knockbackMultiplier = 1.0f + (level * 0.35f);
+        float selfKnockbackMultiplier = 1.0f + (level * 0.5f);
+        int particleCount = 15 + (level * 12);
+
+        // Block usage if no charges or cooldown
         if (charges <= 0) {
             if (!world.isClient) player.sendMessage(Text.of("OverHeated!"), true);
             return TypedActionResult.fail(stack);
@@ -68,41 +81,147 @@ public class FanOfUnyieldingWinds extends Item {
             return TypedActionResult.fail(stack);
         }
 
-        // Reduce charges and start cooldown
+        // Reduce charges + cooldown
         charges--;
         nbt.putInt("Charges", charges);
         player.getItemCooldownManager().set(this, COOLDOWN_TICKS);
 
-        // Knockback logic (server-side)
         if (!world.isClient) {
+            // =========================
+            // SERVER SIDE LOGIC
+            // =========================
+
             Vec3d look = player.getRotationVec(1.0F);
             Vec3d start = player.getEyePos();
             Vec3d end = start.add(look.multiply(RANGE));
-            Box area = new Box(start, end).expand(1.0);
+            Vec3d unlook = player.getRotationVector().multiply(-1);
+
+            // Self knockback scaling
+            player.addVelocity(
+                    unlook.x * SELFKNOCKBACK * selfKnockbackMultiplier,
+                    unlook.y * SELFKNOCKBACK * selfKnockbackMultiplier,
+                    unlook.z * SELFKNOCKBACK * selfKnockbackMultiplier
+            );
+            player.velocityModified = true;
+
+            Box area = new Box(start, end).expand(1.0 + (level * 0.2));
 
             for (Entity entity : world.getOtherEntities(player, area)) {
-                if (entity instanceof LivingEntity) {
-                    entity.addVelocity(look.x * KNOCKBACK, look.y * KNOCKBACK, look.z * KNOCKBACK);
-                    entity.velocityModified = true;
+                if (entity instanceof LivingEntity living) {
+                    living.addVelocity(
+                            look.x * KNOCKBACK * knockbackMultiplier,
+                            look.y * KNOCKBACK * knockbackMultiplier,
+                            look.z * KNOCKBACK * knockbackMultiplier
+                    );
+                    living.velocityModified = true;
                 }
             }
+
         } else {
-            // Client-side particle and sound
+            // =========================
+            // CLIENT SIDE VISUALS
+            // =========================
+
             Vec3d look = player.getRotationVec(1.0F);
             Vec3d start = player.getEyePos();
 
-            for (int i = 0; i < 15; i++) {
-                double offsetX = (world.random.nextDouble() - 0.5) * 1.5;
-                double offsetY = (world.random.nextDouble() - 0.5) * 1.0;
-                double offsetZ = (world.random.nextDouble() - 0.5) * 1.5;
-                Vec3d particlePos = start.add(look.multiply(world.random.nextDouble() * RANGE))
+            // Main particle burst
+            for (int i = 0; i < particleCount; i++) {
+                double offsetX = (world.random.nextDouble() - 0.5) * (1.5 + level * 0.3);
+                double offsetY = (world.random.nextDouble() - 0.5) * (1.0 + level * 0.2);
+                double offsetZ = (world.random.nextDouble() - 0.5) * (1.5 + level * 0.3);
+
+                Vec3d particlePos = start
+                        .add(look.multiply(world.random.nextDouble() * RANGE))
                         .add(offsetX, offsetY, offsetZ);
-                world.addParticle(ParticleTypes.CLOUD, particlePos.x, particlePos.y, particlePos.z,
-                        look.x * 0.1, look.y * 0.1, look.z * 0.1);
+
+                world.addParticle(
+                        ParticleTypes.CLOUD,
+                        particlePos.x, particlePos.y, particlePos.z,
+                        look.x * 0.15 * level,
+                        look.y * 0.15 * level,
+                        look.z * 0.15 * level
+                );
             }
 
-            world.playSound(player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_SAND_BREAK,
-                    SoundCategory.PLAYERS, 1.0F, 1.0F, false);
+            // Base sound
+            world.playSound(
+                    player.getX(), player.getY(), player.getZ(),
+                    SoundEvents.BLOCK_SAND_BREAK,
+                    SoundCategory.PLAYERS,
+                    1.0F,
+                    1.0F + (level * 0.1f),
+                    false
+            );
+
+            // =========================
+            // SHOCKWAVE TIERS
+            // =========================
+
+            // Tier 1: small burst
+            if (level >= 1) {
+                world.addParticle(ParticleTypes.POOF, start.x, start.y, start.z, 0, 0.1, 0);
+            }
+
+            // Tier 2: explosion flash
+            if (level >= 2) {
+                world.addParticle(ParticleTypes.EXPLOSION, start.x, start.y, start.z, 0, 0, 0);
+            }
+
+            // Tier 3: sonic-style burst
+            if (level >= 3) {
+                world.addParticle(ParticleTypes.SONIC_BOOM, start.x, start.y, start.z, 0, 0, 0);
+            }
+
+            // Tier 4: expanding ring shockwave
+            if (level >= 4) {
+                int ringPoints = 24;
+                double radius = 1.5 + level * 0.4;
+
+                for (int i = 0; i < ringPoints; i++) {
+                    double angle = (Math.PI * 2) * (i / (double) ringPoints);
+
+                    Vec3d ring = new Vec3d(
+                            Math.cos(angle),
+                            0.1,
+                            Math.sin(angle)
+                    ).multiply(radius);
+
+                    world.addParticle(
+                            ParticleTypes.CLOUD,
+                            start.x + ring.x,
+                            start.y,
+                            start.z + ring.z,
+                            ring.x * 0.2,
+                            0.05,
+                            ring.z * 0.2
+                    );
+                }
+            }
+
+            // Tier 5: heavy shockwave burst
+            if (level >= 5) {
+                for (int i = 0; i < 30; i++) {
+                    double angle = world.random.nextDouble() * Math.PI * 2;
+                    double radius = 1.0 + world.random.nextDouble() * 2.5;
+
+                    Vec3d dir = new Vec3d(
+                            Math.cos(angle),
+                            world.random.nextDouble() * 0.5,
+                            Math.sin(angle)
+                    ).multiply(radius);
+
+                    world.addParticle(
+                            ParticleTypes.CLOUD,
+                            start.x,
+                            start.y,
+                            start.z,
+                            dir.x * 0.2,
+                            dir.y * 0.1,
+                            dir.z * 0.2
+                    );
+                }
+            }
         }
 
         player.swingHand(hand, true);

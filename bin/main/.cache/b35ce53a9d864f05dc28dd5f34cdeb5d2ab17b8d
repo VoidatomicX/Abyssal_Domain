@@ -1,0 +1,19 @@
+// 1.20.1	2026-04-12T09:46:14.9397536	Abyssal Domain/Tags for minecraft:block
+c35147a7e51c88a45ba6d8c024eef264d77c198a data\minecraft\tags\blocks\wooden_fences.json
+3a4a72e7d71da33cadca3eeee286063d5fd711e1 data\minecraft\tags\blocks\stairs.json
+b4b8fd715b94c35173cb394a9ec61fea2c8b6ade data\minecraft\tags\blocks\mineable\axe.json
+e6d8355d71779a13c5b0253395ad70ce71649c83 data\minecraft\tags\blocks\stone_buttons.json
+11ed615b7da14b8962417f421b8298918c370b5d data\minecraft\tags\blocks\fence_gates.json
+112ffd89c35f6daffabe7fb94cde829e380ce969 data\minecraft\tags\blocks\signs.json
+c85e658ad62b9c4dec31138114fbdbcbbf94e98e data\minecraft\tags\blocks\mineable\pickaxe.json
+e67645ce0b460a70a9386d11bd5c4d1276478bb1 data\minecraft\tags\blocks\planks.json
+cf27a2830b18a508e752b2bfa07b64bab7e5908f data\minecraft\tags\blocks\wooden_buttons.json
+bafddcbbe4c6d0e4e2fc1a2d6fee528f9de3f6d3 data\minecraft\tags\blocks\walls.json
+80b419272b7a74295f53ab6df181a47b37e567aa data\minecraft\tags\blocks\wooden_slabs.json
+eb3ae6ebc90360db2ccdcc35f5302a11d8caefa1 data\minecraft\tags\blocks\wooden_doors.json
+5cf0893c0e600fd98f33f11f9b06f2acd73d3dd0 data\minecraft\tags\blocks\wooden_stairs.json
+72b9a8527badd2ceb1aa7f0cc6892ebf5a468cf0 data\minecraft\tags\blocks\stone_pressure_plates.json
+879ed7394b2f3b7a554e7f2da4628cee1678cb8a data\minecraft\tags\blocks\wooden_pressure_plates.json
+d2a7da154e2099d41912a79f1413b5814523a3c6 data\minecraft\tags\blocks\wall_signs.json
+c798c462a219f3efae8e6238252a3c151179bf87 data\minecraft\tags\blocks\wooden_trapdoors.json
+85161d0c46c8ecffe853a0a9c9bf2d7bc16fc9d1 data\minecraft\tags\blocks\slabs.json

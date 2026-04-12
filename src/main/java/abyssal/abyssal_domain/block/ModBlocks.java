@@ -17,7 +17,7 @@ import nightlib.bases.NightLibWoodenSet;
 public class ModBlocks{
 
     public static final Block Gilded_Ruby_Bars = registerBlock("gilded_ruby_bars",
-            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.NETHERITE)));
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.NETHERITE).nonOpaque()));
 
     public static final Block Deepslate_Gilded_Block_Ore = registerBlock("deepslate_gilded_block_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE).sounds(BlockSoundGroup.DEEPSLATE)));

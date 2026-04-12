@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "abyssal_domain:block/gilded_ruby_bricks_pressure_plate"
+    },
+    "powered=true": {
+      "model": "abyssal_domain:block/gilded_ruby_bricks_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crepe_myrtle_planks_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "abyssal_domain:crepe_myrtle_planks_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:crepe_myrtle_planks_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_crepe_myrtle_planks_planks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:crepe_myrtle_planks_slab"
+    ]
+  },
+  "sends_telemetry_event": false
+}

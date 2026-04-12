@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "R": {
+      "item": "abyssal_domain:crepe_myrtle_planks_planks"
+    }
+  },
+  "pattern": [
+    "RR ",
+    "RR ",
+    "RR "
+  ],
+  "result": {
+    "count": 3,
+    "item": "abyssal_domain:crepe_myrtle_planks_door"
+  },
+  "show_notification": true
+}

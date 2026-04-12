@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "gildedruby",
+  "ingredient": {
+    "item": "abyssal_domain:raw_gilded_ruby"
+  },
+  "result": "abyssal_domain:gilded_ruby"
+}

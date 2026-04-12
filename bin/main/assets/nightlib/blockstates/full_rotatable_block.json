@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "nightlib:block/full_rotatable_block"
+    }
+  }
+}

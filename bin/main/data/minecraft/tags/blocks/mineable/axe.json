@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "abyssal_domain:crepe_myrtle_planks_planks",
+    "abyssal_domain:crepe_myrtle_planks_stairs",
+    "abyssal_domain:crepe_myrtle_planks_slab",
+    "abyssal_domain:crepe_myrtle_planks_fence",
+    "abyssal_domain:crepe_myrtle_planks_fence_gate",
+    "abyssal_domain:crepe_myrtle_planks_button",
+    "abyssal_domain:crepe_myrtle_planks_pressure_plate",
+    "abyssal_domain:crepe_myrtle_planks_door",
+    "abyssal_domain:crepe_myrtle_planks_trapdoor"
+  ]
+}

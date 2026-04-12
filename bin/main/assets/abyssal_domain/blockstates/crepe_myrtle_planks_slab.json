@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "abyssal_domain:block/crepe_myrtle_planks_slab"
+    },
+    "type=double": {
+      "model": "abyssal_domain:block/crepe_myrtle_planks_planks"
+    },
+    "type=top": {
+      "model": "abyssal_domain:block/crepe_myrtle_planks_slab_top"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side",
+  "textures": {
+    "wall": "abyssal_domain:block/chiseled_gilded_ruby_block"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "abyssal_domain:block/crepe_myrtle_planks_planks"
+  }
+}

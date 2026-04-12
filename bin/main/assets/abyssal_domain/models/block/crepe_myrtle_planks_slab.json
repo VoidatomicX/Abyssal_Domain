@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "abyssal_domain:block/crepe_myrtle_planks_planks",
+    "side": "abyssal_domain:block/crepe_myrtle_planks_planks",
+    "top": "abyssal_domain:block/crepe_myrtle_planks_planks"
+  }
+}

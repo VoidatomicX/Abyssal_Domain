@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "abyssal_domain:block/block_gilded_ruby_slab"
+    },
+    "type=double": {
+      "model": "abyssal_domain:block/block_gilded_ruby"
+    },
+    "type=top": {
+      "model": "abyssal_domain:block/block_gilded_ruby_slab_top"
+    }
+  }
+}

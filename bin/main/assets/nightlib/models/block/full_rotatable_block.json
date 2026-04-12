@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "nightlib:block/full_rotatable_block"
+  }
+}

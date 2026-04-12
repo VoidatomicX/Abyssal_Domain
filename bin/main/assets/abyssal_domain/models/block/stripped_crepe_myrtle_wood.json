@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "abyssal_domain:block/stripped_crepe_myrtle_log",
+    "side": "abyssal_domain:block/stripped_crepe_myrtle_log"
+  }
+}

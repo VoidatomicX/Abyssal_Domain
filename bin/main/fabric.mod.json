@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "abyssal_domain",
+  "version": "${version}",
+  "name": "Abyssal Domain",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/abyssal_domain/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "abyssal.abyssal_domain.datagen.AbyssaldomainDataGenerator"
+    ],
+    "client": [
+      "abyssal.abyssal_domain.client.Abyssal_domainClient"
+    ],
+    "main": [
+      "abyssal.abyssal_domain.Abyssal_domain"
+    ]
+  },
+  "mixins": [
+    "abyssal_domain.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

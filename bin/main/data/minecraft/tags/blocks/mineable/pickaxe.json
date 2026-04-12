@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "abyssal_domain:block_gilded_ruby",
+    "abyssal_domain:block_gilded_ruby_stairs",
+    "abyssal_domain:block_gilded_ruby_slab",
+    "abyssal_domain:block_gilded_ruby_wall",
+    "abyssal_domain:block_gilded_ruby_button",
+    "abyssal_domain:block_gilded_ruby_pressure_plate",
+    "abyssal_domain:gilded_ruby_bricks",
+    "abyssal_domain:gilded_ruby_bricks_stairs",
+    "abyssal_domain:gilded_ruby_bricks_slab",
+    "abyssal_domain:gilded_ruby_bricks_wall",
+    "abyssal_domain:gilded_ruby_bricks_button",
+    "abyssal_domain:gilded_ruby_bricks_pressure_plate",
+    "abyssal_domain:chiseled_gilded_ruby_block",
+    "abyssal_domain:chiseled_gilded_ruby_block_stairs",
+    "abyssal_domain:chiseled_gilded_ruby_block_slab",
+    "abyssal_domain:chiseled_gilded_ruby_block_wall",
+    "abyssal_domain:chiseled_gilded_ruby_block_button",
+    "abyssal_domain:chiseled_gilded_ruby_block_pressure_plate"
+  ]
+}

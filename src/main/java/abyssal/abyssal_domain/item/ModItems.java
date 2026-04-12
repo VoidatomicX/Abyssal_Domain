@@ -43,6 +43,9 @@ public class ModItems {
             "fan_of_unyielding_winds",
             new FanOfUnyieldingWinds(new FabricItemSettings().maxCount(1))
     );
+
+
+
     public static final Item Terminus_Est = registerItem(
             "terminus_est",
             new Terminus_Est(ToolMaterials.NETHERITE,5,-3.3f, new FabricItemSettings()));
@@ -54,10 +57,16 @@ public class ModItems {
             new Scythe(ToolMaterials.NETHERITE,4,-2.4f, new FabricItemSettings()));
 
     public static final Item Oraxia = registerItem("oraxia",
-            new OraxiaItem(new FabricItemSettings()));
+            new OraxiaItem(new FabricItemSettings().maxCount(1)));
 
     public static final Item Voruna = registerItem("voruna",
-            new VorunaItem( new FabricItemSettings()));
+            new VorunaItem( new FabricItemSettings().maxCount(1)));
+
+    public static final Item Grappling_Hook = registerItem("grappling_hook",
+            new GrapplingHook());
+
+    public static final Item Chain_of_Judgment = registerItem("chain_of_judgment",
+            new ChainOfJudgment(ToolMaterials.NETHERITE, 6, -2.6f, new FabricItemSettings().maxCount(1)));
 
     public static final Item Gilded_Ruby_Hoe = registerItem("gilded_ruby_hoe",
             new HoeItem(ModToolMaterial.GILDEDRUBY,-3,0f, new FabricItemSettings()));

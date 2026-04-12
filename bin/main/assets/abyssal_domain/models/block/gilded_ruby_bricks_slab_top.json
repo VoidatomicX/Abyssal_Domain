@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "abyssal_domain:block/gilded_ruby_bricks",
+    "side": "abyssal_domain:block/gilded_ruby_bricks",
+    "top": "abyssal_domain:block/gilded_ruby_bricks"
+  }
+}

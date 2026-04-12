@@ -13,42 +13,34 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.ITEM_GROUP,
-        new Identifier(Abyssal_domain.MOD_ID, "gilded"),
-        FabricItemGroup.builder().displayName(Text.translatable("itemgroup.gilded"))
-                .icon(() -> new ItemStack(ModItems.Gilded_Ruby)).entries((displayContext, entries) -> {
-                    entries.add(ModItems.Gilded_Ruby);
-                    entries.add(ModItems.Raw_Gilded_Ruby);
-                    entries.add(ModBlocks.Deepslate_Gilded_Block_Ore);
-                    entries.add(ModBlocks.Gilded_Block_Ore);
-                    entries.add(ModBlocks.Gilded_Ruby_Bars);
-                    entries.add(ModItems.Gilded_Ruby_Sword);
-                    entries.add(ModItems.Gilded_Ruby_Axe);
-                    entries.add(ModItems.Gilded_Ruby_Pickaxe);
-                    entries.add(ModItems.Gilded_Ruby_Shovel);
-                    entries.add(ModItems.Gilded_Ruby_Hoe);
-                    entries.add(ModItems.Terminus_Est);
-                    entries.add(ModItems.FAN_OF_UNYIELDING_WINDS);
-                    entries.add(ModItems.Goobichthys_Spawn_Egg);
-                    entries.add(ModItems.Oraxia);
-                    entries.add(ModItems.Voruna);
-                    entries.add(ModItems.Scythe);
+    public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(Abyssal_domain.MOD_ID, "gilded"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.gilded"))
+                    .icon(() -> new ItemStack(ModItems.Gilded_Ruby)).entries((displayContext, entries) -> {
+                        Registries.ITEM.forEach(item -> {
+                            Identifier id = Registries.ITEM.getId(item);
 
-                    ModBlocks.BLOCK_GILDED_RUBY.addAllBlocksToEntries(entries);
+                            if (id != null && id.getNamespace().equals(Abyssal_domain.MOD_ID)) {
+                                entries.add(item);
+                            }
+                        });
 
-                    ModBlocks.GILDED_RUBY_BRICKS.addAllBlocksToEntries(entries);
 
-                    ModBlocks.CHISELED_GILDED_RUBY_BLOCK.addAllBlocksToEntries(entries);
+                        ModBlocks.BLOCK_GILDED_RUBY.addAllBlocksToEntries(entries);
 
-                    entries.add(ModBlocks.Crepe_Myrtle_Leaves);
-                    entries.add(ModBlocks.Crepe_Myrtle_Log);
-                    entries.add(ModBlocks.Crepe_Myrtle_Wood);
-                    entries.add(ModBlocks.Stripped_Crepe_Myrtle_Log);
-                    entries.add(ModBlocks.Stripped_Crepe_Myrtle_Wood);
+                        ModBlocks.GILDED_RUBY_BRICKS.addAllBlocksToEntries(entries);
 
-                    ModBlocks.Crepe_Myrtle_PLANKS.addAllBlocksToEntries(entries);
+                        ModBlocks.CHISELED_GILDED_RUBY_BLOCK.addAllBlocksToEntries(entries);
 
-                }).build());
+                        entries.add(ModBlocks.Crepe_Myrtle_Leaves);
+                        entries.add(ModBlocks.Crepe_Myrtle_Log);
+                        entries.add(ModBlocks.Crepe_Myrtle_Wood);
+                        entries.add(ModBlocks.Stripped_Crepe_Myrtle_Log);
+                        entries.add(ModBlocks.Stripped_Crepe_Myrtle_Wood);
+
+                        ModBlocks.Crepe_Myrtle_PLANKS.addAllBlocksToEntries(entries);
+
+                    }).build());
 
 
     public static void registerItemGroups() {

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "abyssal_domain:block_gilded_ruby_pressure_plate",
+    "abyssal_domain:gilded_ruby_bricks_pressure_plate",
+    "abyssal_domain:chiseled_gilded_ruby_block_pressure_plate"
+  ]
+}
