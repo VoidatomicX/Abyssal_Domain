@@ -13,7 +13,7 @@
 		},
 		{
 			"predicate": { "abyssal_domain:enchant_type": 2.0 },
-			"model": "abyssal_domain:item/scythe"
+			"model": "abyssal_domain:item/toxic_scythe"
 		},
 		{
 			"predicate": { "abyssal_domain:enchant_type": 3.0 },
