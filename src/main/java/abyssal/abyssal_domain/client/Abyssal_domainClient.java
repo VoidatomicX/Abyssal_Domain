@@ -44,27 +44,6 @@ public class Abyssal_domainClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Crepe_Myrtle_PLANKS.door, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Crepe_Myrtle_PLANKS.trapdoor, RenderLayer.getCutout());
 
-        ModelPredicateProviderRegistry.register(
-                ModItems.Scythe,
-                new Identifier("abyssal_domain", "enchant_type"),
-                (stack, world, entity, seed) -> {
-                    var enchants = EnchantmentHelper.get(stack);
-
-                    if (enchants.isEmpty()) return 0.0f;
-                    var enchant = enchants.keySet().iterator().next();
-                    Identifier id = Registries.ENCHANTMENT.getId(enchant);
-
-                    if (id == null) return 0.0f;
-
-
-                    return switch (id.toString()) {
-                        case "minecraft:fire_aspect" -> 1.0f;
-                        case "minecraft:sharpness" -> 2.0f;
-                        case "minecraft:knockback" -> 3.0f;
-                        default -> 0.0f;
-                    };
-                }
-        );
 
 
 
