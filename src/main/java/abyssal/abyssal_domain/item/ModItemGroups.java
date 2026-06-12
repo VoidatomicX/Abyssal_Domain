@@ -23,6 +23,8 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                     entries.add(ModBlocks.Gilded_Block_Ore);
                     entries.add(ModBlocks.Gilded_Ruby_Bars);
                     entries.add(ModItems.Gilded_Ruby_Sword);
+                    entries.add(ModItems.Gilded_Ruby_Greatsword);
+                    entries.add(ModItems.Gilded_Ruby_Battleaxe);
                     entries.add(ModItems.Gilded_Ruby_Axe);
                     entries.add(ModItems.Gilded_Ruby_Pickaxe);
                     entries.add(ModItems.Gilded_Ruby_Shovel);

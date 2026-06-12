@@ -3,32 +3,33 @@
 	"credit": "Made with Blockbench",
 	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "abyssal_domain:item/gilded_ruby_sword"
+		"layer0": "abyssal_domain:item/gilded_ruby_greatsword"
 	},
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [90, 90, -43],
-			"translation": [0, 8.75, 2.75],
+			"rotation": [-90, -90, -45],
+			"translation": [0, 7, 1.25],
 			"scale": [1.43, 1.43, 1]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [90, 90, -134],
-			"translation": [0, 8.75, 2.75],
+			"rotation": [-90, 90, 45],
+			"translation": [0, 7, 1.25],
 			"scale": [1.43, 1.43, 1]
 		},
 		"firstperson_righthand": {
 			"rotation": [90, 90, -43],
 			"translation": [0, 7.75, 2.25],
-			"scale": [1.43, 1.43, 1]
+			"scale": [1.43, 1.43, 1.56]
 		},
 		"firstperson_lefthand": {
 			"rotation": [90, 90, -134],
 			"translation": [0, 8.75, 2.75],
-			"scale": [1.43, 1.43, 1]
+			"scale": [1.43, 1.43, 1.56]
 		},
 		"ground": {
 			"rotation": [90, 0, 0],
-			"translation": [0, 4.5, 0]
+			"translation": [0, -5.75, 0],
+			"scale": [1.67, 1.67, 1]
 		}
 	}
 }

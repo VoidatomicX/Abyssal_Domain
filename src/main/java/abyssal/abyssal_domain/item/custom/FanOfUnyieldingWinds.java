@@ -18,9 +18,9 @@ import net.minecraft.world.World;
 
 public class FanOfUnyieldingWinds extends Item {
 
-    private static final double RANGE = 5.0;
-    private static final double KNOCKBACK = 1.2;
-    private static final int MAX_CHARGES = 4;
+    private static final double RANGE = 5;
+    private static final double KNOCKBACK = 1.4;
+    private static final int MAX_CHARGES = 6;
     private static final int RECHARGE_TICKS = 100; // 5 seconds
     private static final int COOLDOWN_TICKS = 0;  // 1 second
 

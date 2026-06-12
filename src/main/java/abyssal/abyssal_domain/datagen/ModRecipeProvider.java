@@ -45,6 +45,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.Gilded_Ruby), conditionsFromItem(ModItems.Gilded_Ruby))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.Gilded_Ruby_Sword)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.Gilded_Ruby_Greatsword, 1)
+                .pattern(" RR")
+                .pattern("RRR")
+                .pattern("SR ")
+                .input('S', Items.STICK)
+                .input('R', ModItems.Gilded_Ruby)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .criterion(hasItem(ModItems.Gilded_Ruby), conditionsFromItem(ModItems.Gilded_Ruby))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.Gilded_Ruby_Greatsword)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.Gilded_Ruby_Battleaxe, 1)
+                .pattern(" RR")
+                .pattern("RSC")
+                .pattern("S  ")
+                .input('S', Items.STICK)
+                .input('C', ModBlocks.BLOCK_GILDED_RUBY.base)
+                .input('R', ModItems.Gilded_Ruby)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .criterion(hasItem(ModItems.Gilded_Ruby), conditionsFromItem(ModItems.Gilded_Ruby))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.Gilded_Ruby_Battleaxe)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.Gilded_Ruby_Axe, 1)
                 .pattern("RR ")
                 .pattern("RS ")

@@ -47,8 +47,16 @@ public class ModItems {
             "terminus_est",
             new Terminus_Est(ToolMaterials.NETHERITE,5,-3.3f, new FabricItemSettings()));
 
+
+
     public static final Item Gilded_Ruby_Sword = registerItem("gilded_ruby_sword",
-            new SwordItem(ToolMaterials.NETHERITE,4,-2.4f, new FabricItemSettings()));
+            new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
+
+    public static final Item Gilded_Ruby_Battleaxe = registerItem("gilded_ruby_battleaxe",
+            new AxeItem(ModToolMaterial.GILDEDRUBY,6,-3.2f, new FabricItemSettings()));
+
+    public static final Item Gilded_Ruby_Greatsword = registerItem("gilded_ruby_greatsword",
+            new SwordItem(ModToolMaterial.GILDEDRUBY,7,-3f, new FabricItemSettings()));
 
     public static final Item Oraxia = registerItem("oraxia",
             new OraxiaItem(new FabricItemSettings()));
