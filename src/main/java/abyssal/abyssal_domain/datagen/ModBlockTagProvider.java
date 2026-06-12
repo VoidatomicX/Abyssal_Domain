@@ -23,7 +23,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.Gilded_Ruby_Bars)
                 .add(ModBlocks.Deepslate_Gilded_Block_Ore);
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.Gilded_Block_Ore)
                 .add(ModBlocks.Gilded_Ruby_Bars)
                 .add(ModBlocks.Deepslate_Gilded_Block_Ore);
