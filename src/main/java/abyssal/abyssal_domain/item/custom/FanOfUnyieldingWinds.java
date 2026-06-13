@@ -1,12 +1,18 @@
 package abyssal.abyssal_domain.item.custom;
 
+import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.MiningToolItem;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
@@ -16,7 +22,9 @@ import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class FanOfUnyieldingWinds extends Item {
+import java.util.UUID;
+
+public class FanOfUnyieldingWinds extends MiningToolItem {
 
     private static final double RANGE = 5;
     private static final double KNOCKBACK = 1.4;
@@ -24,11 +32,11 @@ public class FanOfUnyieldingWinds extends Item {
     private static final int RECHARGE_TICKS = 100; // 5 seconds
     private static final int COOLDOWN_TICKS = 0;  // 1 second
 
-    public FanOfUnyieldingWinds(Settings settings) {
-        super(settings);
-    }
+        public FanOfUnyieldingWinds(ToolMaterial material, float damage, float speed, Settings settings) {
+            super(damage, speed, material, BlockTags.HOE_MINEABLE, settings);
+        }
 
-    @Override
+        @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!world.isClient && entity instanceof PlayerEntity) {
             NbtCompound nbt = stack.getOrCreateNbt();

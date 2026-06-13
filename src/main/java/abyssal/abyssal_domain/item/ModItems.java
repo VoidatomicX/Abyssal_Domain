@@ -41,8 +41,8 @@ public class ModItems {
 
     public static final Item FAN_OF_UNYIELDING_WINDS = registerItem(
             "fan_of_unyielding_winds",
-            new FanOfUnyieldingWinds(new FabricItemSettings().maxCount(1))
-    );
+            new FanOfUnyieldingWinds(ToolMaterials.NETHERITE,-3,-2.2f, new FabricItemSettings()));
+
     public static final Item Terminus_Est = registerItem(
             "terminus_est",
             new Terminus_Est(ToolMaterials.NETHERITE,5,-3.3f, new FabricItemSettings()));
@@ -75,6 +75,8 @@ public class ModItems {
 
     public static final Item Gilded_Ruby_Pickaxe = registerItem("gilded_ruby_pickaxe",
             new PickaxeItem(ModToolMaterial.GILDEDRUBY,1,-2.8f, new FabricItemSettings()));
+
+
 
     public static final Item Goobichthys_Spawn_Egg = registerItem("goobichthys_spawn_egg",
             new SpawnEggItem(ModEntities.GOOBICHTHYS, 0xab6518,0x3b260f, new FabricItemSettings()));
