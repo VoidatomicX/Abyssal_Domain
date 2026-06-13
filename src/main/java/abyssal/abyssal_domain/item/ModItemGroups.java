@@ -19,6 +19,8 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                 .icon(() -> new ItemStack(ModItems.Gilded_Ruby)).entries((displayContext, entries) -> {
                     entries.add(ModItems.Gilded_Ruby);
                     entries.add(ModItems.Raw_Gilded_Ruby);
+                    entries.add(ModItems.Daedric_Ingot);
+                    entries.add(ModItems.Raw_Daedric);
                     entries.add(ModBlocks.Deepslate_Gilded_Block_Ore);
                     entries.add(ModBlocks.Gilded_Block_Ore);
                     entries.add(ModBlocks.Gilded_Ruby_Bars);
@@ -29,6 +31,14 @@ public static final ItemGroup Gilded_Ruby_Group = Registry.register(Registries.I
                     entries.add(ModItems.Gilded_Ruby_Pickaxe);
                     entries.add(ModItems.Gilded_Ruby_Shovel);
                     entries.add(ModItems.Gilded_Ruby_Hoe);
+                    entries.add(ModBlocks.Daedric_ore);
+                    entries.add(ModItems.Daedric_Sword);
+                    entries.add(ModItems.Daedric_Greatsword);
+                    entries.add(ModItems.Daedric_Battleaxe);
+                    entries.add(ModItems.Daedric_Axe);
+                    entries.add(ModItems.Daedric_Pickaxe);
+                    entries.add(ModItems.Daedric_Shovel);
+                    entries.add(ModItems.Daedric_Hoe);
                     entries.add(ModItems.Terminus_Est);
                     entries.add(ModItems.FAN_OF_UNYIELDING_WINDS);
                     entries.add(ModItems.Goobichthys_Spawn_Egg);

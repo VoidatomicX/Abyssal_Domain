@@ -18,20 +18,12 @@ public class ModItems {
     public static final Item Raw_Gilded_Ruby = registerItem("raw_gilded_ruby",
             new Item(new FabricItemSettings()));
 
-    public static final Item PARTICLE_SWITCHER = registerItem("particle_switcher",
-            new ParticleSwitcher(new FabricItemSettings()));
+    public static final Item Daedric_Ingot = registerItem("daedric_ingot",
+            new Item(new FabricItemSettings()));
+    public static final Item Raw_Daedric = registerItem("raw_daedric",
+            new Item(new FabricItemSettings()));
 
-    //public static final TestGlint GREEN_GLINT =
-       //     (TestGlint) registerItem("green_glint",
-      //              new TestGlint(0x00FF00));
 
-    //public static final TestGlint BLUE_GLINT =
-     //       (TestGlint) registerItem("blue_glint",
-      //              new TestGlint(0x0000FF));
-
-    //public static final TestGlint RED_GLINT =
-     //       (TestGlint) registerItem("red_glint",
-     //               new TestGlint(0xFF0000));
 
     public static final Item GOOB_BUCKET = Registry.register(
             Registries.ITEM,
@@ -78,12 +70,36 @@ public class ModItems {
 
 
 
+
     public static final Item Goobichthys_Spawn_Egg = registerItem("goobichthys_spawn_egg",
             new SpawnEggItem(ModEntities.GOOBICHTHYS, 0xab6518,0x3b260f, new FabricItemSettings()));
 
 
+    public static final Item Daedric_Sword = registerItem("daedric_sword",
+            new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
 
-private static Item registerItem(String name, Item item) {
+    public static final Item Daedric_Battleaxe = registerItem("daedric_battleaxe",
+            new AxeItem(ModToolMaterial.GILDEDRUBY,6,-3.2f, new FabricItemSettings()));
+
+    public static final Item Daedric_Greatsword = registerItem("daedric_greatsword",
+            new SwordItem(ModToolMaterial.GILDEDRUBY,7,-3f, new FabricItemSettings()));
+
+    public static final Item Daedric_Hoe = registerItem("daedric_hoe",
+            new HoeItem(ModToolMaterial.GILDEDRUBY,-3,0f, new FabricItemSettings()));
+
+    public static final Item Daedric_Axe = registerItem("daedric_axe",
+            new AxeItem(ModToolMaterial.GILDEDRUBY,5,-2.9f, new FabricItemSettings()));
+
+    public static final Item Daedric_Shovel = registerItem("daedric_shovel",
+            new ShovelItem(ModToolMaterial.GILDEDRUBY,1,-3f, new FabricItemSettings()));
+
+    public static final Item Daedric_Pickaxe = registerItem("daedric_pickaxe",
+            new PickaxeItem(ModToolMaterial.GILDEDRUBY,1,-2.8f, new FabricItemSettings()));
+
+
+
+
+    private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, new Identifier(Abyssal_domain.MOD_ID, name), item);
 }
 
