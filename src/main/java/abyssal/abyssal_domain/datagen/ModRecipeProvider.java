@@ -42,8 +42,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.Gilded_Ruby, RecipeCategory.DECORATIONS,
                 ModBlocks.BLOCK_GILDED_RUBY.base);
 
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.Daedric_Ingot, RecipeCategory.DECORATIONS,
+                ModBlocks.DAEDRIC_BLOCK.base);
 
 
+        //Corundum
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.Gilded_Ruby_Sword, 1)
                 .pattern("  R")
                 .pattern(" R ")
@@ -115,6 +118,81 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.Gilded_Ruby), conditionsFromItem(ModItems.Gilded_Ruby))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.Gilded_Ruby_Hoe)));
 
+
+        //DAEDRIC
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.Daedric_Sword, 1)
+                .pattern("  R")
+                .pattern(" R ")
+                .pattern("S  ")
+                .input('S', Items.STICK)
+                .input('R', ModItems.Daedric_Ingot)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .criterion(hasItem(ModItems.Daedric_Ingot), conditionsFromItem(ModItems.Daedric_Ingot))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.Daedric_Sword)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.Daedric_Greatsword, 1)
+                .pattern(" RR")
+                .pattern("RRR")
+                .pattern("SR ")
+                .input('S', Items.STICK)
+                .input('R', ModItems.Daedric_Ingot)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .criterion(hasItem(ModItems.Daedric_Ingot), conditionsFromItem(ModItems.Daedric_Ingot))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.Daedric_Greatsword)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.Daedric_Battleaxe, 1)
+                .pattern(" RR")
+                .pattern("RSC")
+                .pattern("S  ")
+                .input('S', Items.STICK)
+                .input('C', ModBlocks.DAEDRIC_BLOCK.base)
+                .input('R', ModItems.Daedric_Ingot)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .criterion(hasItem(ModItems.Daedric_Ingot), conditionsFromItem(ModItems.Daedric_Ingot))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.Daedric_Battleaxe)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.Daedric_Axe, 1)
+                .pattern("RR ")
+                .pattern("RS ")
+                .pattern(" S ")
+                .input('S', Items.STICK)
+                .input('R', ModItems.Daedric_Ingot)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .criterion(hasItem(ModItems.Daedric_Ingot), conditionsFromItem(ModItems.Daedric_Ingot))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.Daedric_Axe)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.Daedric_Pickaxe, 1)
+                .pattern("RRR")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('S', Items.STICK)
+                .input('R', ModItems.Daedric_Ingot)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .criterion(hasItem(ModItems.Daedric_Ingot), conditionsFromItem(ModItems.Daedric_Ingot))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.Daedric_Pickaxe)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.Daedric_Shovel, 1)
+                .pattern(" R ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('S', Items.STICK)
+                .input('R', ModItems.Daedric_Ingot)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .criterion(hasItem(ModItems.Daedric_Ingot), conditionsFromItem(ModItems.Daedric_Ingot))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.Daedric_Shovel)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.Daedric_Hoe, 1)
+                .pattern("RR ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('S', Items.STICK)
+                .input('R', ModItems.Daedric_Ingot)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .criterion(hasItem(ModItems.Daedric_Ingot), conditionsFromItem(ModItems.Daedric_Ingot))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.Daedric_Hoe)));
+
+
+        //Woods
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.Crepe_Myrtle_PLANKS.stairs, 4)
                 .pattern("R  ")
                 .pattern("RR ")

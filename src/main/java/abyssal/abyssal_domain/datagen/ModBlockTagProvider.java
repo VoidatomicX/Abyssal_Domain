@@ -44,5 +44,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.Crepe_Myrtle_Wood)
                 .add(ModBlocks.Stripped_Crepe_Myrtle_Log)
                 .add(ModBlocks.Stripped_Crepe_Myrtle_Wood);
+
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.DAEDRIC_BLOCK.wall)
+                .add(ModBlocks.GILDED_RUBY_BRICKS.wall)
+                .add(ModBlocks.CHISELED_GILDED_RUBY_BLOCK.wall)
+                .add(ModBlocks.BLOCK_GILDED_RUBY.wall);
     }
 }

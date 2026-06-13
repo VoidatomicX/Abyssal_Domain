@@ -45,7 +45,7 @@ public class ModItems {
             new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Battleaxe = registerItem("gilded_ruby_battleaxe",
-            new AxeItem(ModToolMaterial.GILDEDRUBY,6,-3.2f, new FabricItemSettings()));
+            new BattleAxeItem(ModToolMaterial.GILDEDRUBY,6,-3.2f, new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Greatsword = registerItem("gilded_ruby_greatsword",
             new SwordItem(ModToolMaterial.GILDEDRUBY,7,-3f, new FabricItemSettings()));
@@ -79,7 +79,7 @@ public class ModItems {
             new SwordItem(ModToolMaterial.DAEDRIC,4,-2.4f, new FabricItemSettings()));
 
     public static final Item Daedric_Battleaxe = registerItem("daedric_battleaxe",
-            new AxeItem(ModToolMaterial.DAEDRIC,6,-3.2f, new FabricItemSettings()));
+            new BattleAxeItem(ModToolMaterial.DAEDRIC,6,-3.2f, new FabricItemSettings()));
 
     public static final Item Daedric_Greatsword = registerItem("daedric_greatsword",
             new SwordItem(ModToolMaterial.DAEDRIC,7,-3f, new FabricItemSettings()));

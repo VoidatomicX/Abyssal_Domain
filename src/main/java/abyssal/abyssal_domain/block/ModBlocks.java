@@ -72,6 +72,15 @@ public class ModBlocks{
         );
 
 
+    public static final NightLibStoneSet DAEDRIC_BLOCK =
+        new NightLibStoneSet(
+                "abyssal_domain",
+                "daedric_block",
+                FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK),
+                BlockSetType.STONE
+        );
+
+
     //Gilded Ruby Bricks
 
     public static final NightLibStoneSet GILDED_RUBY_BRICKS =
