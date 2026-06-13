@@ -18,6 +18,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> GILDED_SMELTABLES = List.of(ModItems.Raw_Gilded_Ruby,
             ModBlocks.Gilded_Block_Ore, ModBlocks.Deepslate_Gilded_Block_Ore);
 
+    private static final List<ItemConvertible> DAEDRIC_SMELTABLES = List.of(ModItems.Raw_Daedric,
+            ModBlocks.Daedric_ore);
+
     public ModRecipeProvider(FabricDataOutput output) {
         super(output);
     }
@@ -29,6 +32,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerBlasting(exporter, GILDED_SMELTABLES, RecipeCategory.MISC, ModItems.Gilded_Ruby,
                 0.7f, 200, "gildedruby");
+
+        offerSmelting(exporter, DAEDRIC_SMELTABLES, RecipeCategory.MISC, ModItems.Daedric_Ingot,
+                0.7f, 200, "daedric");
+
+        offerBlasting(exporter, DAEDRIC_SMELTABLES, RecipeCategory.MISC, ModItems.Daedric_Ingot,
+                0.7f, 200, "daedric");
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.Gilded_Ruby, RecipeCategory.DECORATIONS,
                 ModBlocks.BLOCK_GILDED_RUBY.base);

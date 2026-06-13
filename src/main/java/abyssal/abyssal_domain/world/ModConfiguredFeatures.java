@@ -31,7 +31,11 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.Gilded_Block_Ore.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.Deepslate_Gilded_Block_Ore.getDefaultState()));
 
+        List<OreFeatureConfig.Target> netherDaedricOre =
+                List.of(OreFeatureConfig.createTarget(netherReplacables, ModBlocks.Daedric_ore.getDefaultState()));
+
         register(context, Gilded_Ruby_Key, Feature.ORE, new OreFeatureConfig(overworldGildedRubyOres, 12));
+        register(context, Daedric_Ore_Key, Feature.ORE, new OreFeatureConfig(netherDaedricOre, 12));
 
     }
 

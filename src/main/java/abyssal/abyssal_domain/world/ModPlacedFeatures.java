@@ -17,13 +17,17 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> Gilded_Ore_Placed_Key = registerKey("gilded_ore_placed");
-    public static final RegistryKey<PlacedFeature> Daedric_Ore = registerKey("daedric_ore_placed");
+    public static final RegistryKey<PlacedFeature> Daedric_Ore_Placed_Key = registerKey("daedric_ore_placed");
 
 
     public static void boostrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, Gilded_Ore_Placed_Key, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.Gilded_Ruby_Key),
+                ModOrePlacement.modifiersWithCount(12,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+
+        register(context, Daedric_Ore_Placed_Key, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.Daedric_Ore_Key),
                 ModOrePlacement.modifiersWithCount(12,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
 

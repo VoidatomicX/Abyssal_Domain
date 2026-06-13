@@ -21,12 +21,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.Gilded_Block_Ore)
                 .add(ModBlocks.Gilded_Ruby_Bars)
-                .add(ModBlocks.Deepslate_Gilded_Block_Ore);
+                .add(ModBlocks.Deepslate_Gilded_Block_Ore)
+                .add(ModBlocks.Daedric_ore);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.Gilded_Block_Ore)
                 .add(ModBlocks.Gilded_Ruby_Bars)
                 .add(ModBlocks.Deepslate_Gilded_Block_Ore);
+
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.Daedric_ore);
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.Crepe_Myrtle_Log)

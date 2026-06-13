@@ -26,6 +26,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.Gilded_Block_Ore, copperLikeOreDrops(ModBlocks.Gilded_Block_Ore, ModItems.Raw_Gilded_Ruby));
         addDrop(ModBlocks.Deepslate_Gilded_Block_Ore, copperLikeOreDrops(ModBlocks.Gilded_Block_Ore, ModItems.Raw_Gilded_Ruby));
 
+        addDrop(ModBlocks.Daedric_ore, daedricLikeOreDrops(ModBlocks.Daedric_ore, ModItems.Raw_Daedric));
+
         addDrop(ModBlocks.Crepe_Myrtle_Log);
         addDrop(ModBlocks.Crepe_Myrtle_Wood);
         addDrop(ModBlocks.Stripped_Crepe_Myrtle_Log);
@@ -40,6 +42,15 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                         .apply(SetCountLootFunction
                                 .builder(UniformLootNumberProvider
                                         .create(1.0F, 3.0F)))
+                        .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))));
+    }
+
+    public LootTable.Builder daedricLikeOreDrops(Block drop, Item item) {
+        return dropsWithSilkTouch(drop, this.applyExplosionDecay(drop,
+                ItemEntry.builder(item)
+                        .apply(SetCountLootFunction
+                                .builder(UniformLootNumberProvider
+                                        .create(1.0F, 2.0F)))
                         .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))));
     }
 
