@@ -76,25 +76,25 @@ public class ModItems {
 
 
     public static final Item Daedric_Sword = registerItem("daedric_sword",
-            new SwordItem(ModToolMaterial.GILDEDRUBY,4,-2.4f, new FabricItemSettings()));
+            new SwordItem(ModToolMaterial.DAEDRIC,4,-2.4f, new FabricItemSettings()));
 
     public static final Item Daedric_Battleaxe = registerItem("daedric_battleaxe",
-            new AxeItem(ModToolMaterial.GILDEDRUBY,6,-3.2f, new FabricItemSettings()));
+            new AxeItem(ModToolMaterial.DAEDRIC,6,-3.2f, new FabricItemSettings()));
 
     public static final Item Daedric_Greatsword = registerItem("daedric_greatsword",
-            new SwordItem(ModToolMaterial.GILDEDRUBY,7,-3f, new FabricItemSettings()));
+            new SwordItem(ModToolMaterial.DAEDRIC,7,-3f, new FabricItemSettings()));
 
     public static final Item Daedric_Hoe = registerItem("daedric_hoe",
-            new HoeItem(ModToolMaterial.GILDEDRUBY,-3,0f, new FabricItemSettings()));
+            new HoeItem(ModToolMaterial.DAEDRIC,-3,0f, new FabricItemSettings()));
 
     public static final Item Daedric_Axe = registerItem("daedric_axe",
-            new AxeItem(ModToolMaterial.GILDEDRUBY,5,-2.9f, new FabricItemSettings()));
+            new AxeItem(ModToolMaterial.DAEDRIC,5,-2.9f, new FabricItemSettings()));
 
     public static final Item Daedric_Shovel = registerItem("daedric_shovel",
-            new ShovelItem(ModToolMaterial.GILDEDRUBY,1,-3f, new FabricItemSettings()));
+            new ShovelItem(ModToolMaterial.DAEDRIC,1,-3f, new FabricItemSettings()));
 
     public static final Item Daedric_Pickaxe = registerItem("daedric_pickaxe",
-            new PickaxeItem(ModToolMaterial.GILDEDRUBY,1,-2.8f, new FabricItemSettings()));
+            new PickaxeItem(ModToolMaterial.DAEDRIC,1,-2.8f, new FabricItemSettings()));
 
 
 
