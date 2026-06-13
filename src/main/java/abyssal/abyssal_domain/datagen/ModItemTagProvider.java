@@ -26,5 +26,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         .add(ModBlocks.Stripped_Crepe_Myrtle_Log.asItem())
         .add(ModBlocks.Stripped_Crepe_Myrtle_Wood.asItem());
 
+
     }
 }

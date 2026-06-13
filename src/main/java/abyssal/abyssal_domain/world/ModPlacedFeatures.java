@@ -17,6 +17,7 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> Gilded_Ore_Placed_Key = registerKey("gilded_ore_placed");
+    public static final RegistryKey<PlacedFeature> Daedric_Ore = registerKey("daedric_ore_placed");
 
 
     public static void boostrap(Registerable<PlacedFeature> context) {
