@@ -1,6 +1,7 @@
 package abyssal.abyssal_domain;
 
 import abyssal.abyssal_domain.block.ModBlocks;
+import abyssal.abyssal_domain.effect.ModEffects;
 import abyssal.abyssal_domain.entity.ModEntities;
 import abyssal.abyssal_domain.entity.custom.GoobichthysEntity;
 import abyssal.abyssal_domain.item.ModItemGroups;
@@ -31,6 +32,7 @@ public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
         ModBlocks.registerModBlocks();
         ModSpawns.register();
         ModLootTableModifiers.modifyLootTables();
+        ModEffects.registerEffects();
 
         FabricDefaultAttributeRegistry.register(ModEntities.GOOBICHTHYS, GoobichthysEntity.createGoobichthyAttributes());
 
