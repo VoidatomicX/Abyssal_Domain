@@ -9,6 +9,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
@@ -53,11 +54,24 @@ public class BattleAxeItem extends AxeItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 
-        target.addStatusEffect(new StatusEffectInstance(
-                ModEffects.STUN,
-                15, // 0.5 seconds
-                0
-        ));
+        if (attacker instanceof PlayerEntity player) {
+
+            boolean criticalHit =
+                    player.fallDistance > 0.0F
+                            && !player.isOnGround()
+                            && !player.isClimbing()
+                            && !player.isTouchingWater()
+                            && !player.hasVehicle();
+
+            if (criticalHit && player.getRandom().nextFloat() < 0.50F) { // 50% chance
+
+                target.addStatusEffect(new StatusEffectInstance(
+                        ModEffects.STUN,
+                        15, // 0.75 seconds
+                        0
+                ));
+            }
+        }
 
         return super.postHit(stack, target, attacker);
     }
