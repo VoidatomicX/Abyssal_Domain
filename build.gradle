@@ -24,6 +24,15 @@ repositories {
             includeGroup "com.jamieswhiteshirt"
         }
     }
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroupByRegex("software\\.bernie.*")
+            includeGroup("com.eliotlash.mclib")
+        }
+    }
+
 }
 
 
@@ -37,6 +46,9 @@ dependencies {
     modImplementation(files("./libs/nightlib-0.0.3.jar"))
 
     include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:2.5.0")
+
+    modImplementation("software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}")
+    implementation("com.eliotlash.mclib:mclib:20")
 
 }
 

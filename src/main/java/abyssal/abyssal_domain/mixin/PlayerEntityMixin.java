@@ -25,6 +25,7 @@ public class PlayerEntityMixin {
             player.sidewaysSpeed = 0.0F;
             player.forwardSpeed = 0.0F;
             player.setJumping(false);
+            player.setSprinting(false);
 
         }
     }

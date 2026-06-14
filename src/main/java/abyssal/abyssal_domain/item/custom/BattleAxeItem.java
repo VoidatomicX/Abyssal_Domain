@@ -55,7 +55,7 @@ public class BattleAxeItem extends AxeItem {
 
         target.addStatusEffect(new StatusEffectInstance(
                 ModEffects.STUN,
-                10, // 0.5 seconds
+                15, // 0.5 seconds
                 0
         ));
 
