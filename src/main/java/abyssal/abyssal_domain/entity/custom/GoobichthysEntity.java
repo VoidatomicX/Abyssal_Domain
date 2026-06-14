@@ -1,6 +1,7 @@
 package abyssal.abyssal_domain.entity.custom;
 
 import abyssal.abyssal_domain.entity.ModEntities;
+import abyssal.abyssal_domain.item.ModItems;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EntityType;
@@ -12,12 +13,16 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -53,6 +58,32 @@ public class GoobichthysEntity extends AnimalEntity {
         }
     }
 
+    @Override
+    public ActionResult interactMob(PlayerEntity player, Hand hand) {
+        ItemStack stack = player.getStackInHand(hand);
+
+        if (stack.isOf(Items.LAVA_BUCKET)) {
+
+            if (!this.getWorld().isClient) {
+
+                ItemStack goobBucket = new ItemStack(ModItems.GOOB_BUCKET);
+
+                if (!player.getAbilities().creativeMode) {
+                    stack.decrement(1);
+                }
+
+                if (!player.getInventory().insertStack(goobBucket)) {
+                    player.dropItem(goobBucket, false);
+                }
+
+                this.discard();
+            }
+
+            return ActionResult.SUCCESS;
+        }
+
+        return super.interactMob(player, hand);
+    }
 
     @Override
     protected void initGoals() {
@@ -77,6 +108,20 @@ public class GoobichthysEntity extends AnimalEntity {
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE,4);
     }
 
+    @Override
+    public boolean isFireImmune() {
+        return true;
+    }
+
+    @Override
+    public boolean canWalkOnFluid(FluidState state) {
+        return state.isIn(FluidTags.LAVA);
+    }
+
+    @Override
+    public boolean canBreatheInWater() {
+        return true;
+    }
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {

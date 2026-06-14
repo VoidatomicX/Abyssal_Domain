@@ -6,10 +6,14 @@ import abyssal.abyssal_domain.item.custom.*;
 import abyssal.abyssal_domain.item.custom.trident.OraxiaItem;
 import abyssal.abyssal_domain.item.custom.trident.VorunaItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+
+import static abyssal.abyssal_domain.Abyssal_domain.MOD_ID;
 
 public class ModItems {
 
@@ -27,8 +31,13 @@ public class ModItems {
 
     public static final Item GOOB_BUCKET = Registry.register(
             Registries.ITEM,
-            new Identifier(Abyssal_domain.MOD_ID,"goob_bucket"),
-            new GoobBucketItem(new Item.Settings().maxCount(1))
+            new Identifier(MOD_ID, "goob_bucket"),
+            new EntityBucketItem(
+                    ModEntities.GOOBICHTHYS,
+                    Fluids.LAVA,
+                    SoundEvents.ITEM_BUCKET_EMPTY_LAVA,
+                    new Item.Settings().maxCount(1)
+            )
     );
 
     public static final Item FAN_OF_UNYIELDING_WINDS = registerItem(
@@ -101,10 +110,10 @@ public class ModItems {
 
 
     private static Item registerItem(String name, Item item) {
-    return Registry.register(Registries.ITEM, new Identifier(Abyssal_domain.MOD_ID, name), item);
+    return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
 }
 
     public static void registerModItems() {
-        Abyssal_domain.LOGGER.info("Registering Mod Items for " + Abyssal_domain.MOD_ID);
+        Abyssal_domain.LOGGER.info("Registering Mod Items for " + MOD_ID);
     }
 }

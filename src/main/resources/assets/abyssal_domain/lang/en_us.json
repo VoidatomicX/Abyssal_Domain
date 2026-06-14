@@ -29,5 +29,7 @@
   "block.abyssal_domain.daedric_ore": "Nether Daedric Ore",
   "block.abyssal_domain.deepslate_gilded_block_ore": "Deepslate Corundum Ore ",
   "block.abyssal_domain.gilded_ruby_bars": "Corundum Bars ",
-  "itemgroup.gilded": "Abyssal Domain"
+  "itemgroup.gilded": "Abyssal Domain",
+
+  "entity.abyssal_domain.goobichthys": "Goobichthys"
 }
