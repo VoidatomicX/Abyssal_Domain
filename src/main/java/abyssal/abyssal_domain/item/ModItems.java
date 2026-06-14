@@ -48,13 +48,7 @@ public class ModItems {
             new BattleAxeItem(ModToolMaterial.GILDEDRUBY,6,-3.2f, new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Greatsword = registerItem("gilded_ruby_greatsword",
-            new SwordItem(ModToolMaterial.GILDEDRUBY,7,-3f, new FabricItemSettings()));
-
-    public static final Item Oraxia = registerItem("oraxia",
-            new OraxiaItem(new FabricItemSettings()));
-
-    public static final Item Voruna = registerItem("voruna",
-            new VorunaItem( new FabricItemSettings()));
+            new GreatSwordItem(ModToolMaterial.GILDEDRUBY,7,-3f, new FabricItemSettings()));
 
     public static final Item Gilded_Ruby_Hoe = registerItem("gilded_ruby_hoe",
             new HoeItem(ModToolMaterial.GILDEDRUBY,-3,0f, new FabricItemSettings()));
@@ -70,6 +64,13 @@ public class ModItems {
 
 
 
+    public static final Item Oraxia = registerItem("oraxia",
+            new OraxiaItem(new FabricItemSettings()));
+
+    public static final Item Voruna = registerItem("voruna",
+            new VorunaItem( new FabricItemSettings()));
+
+
 
     public static final Item Goobichthys_Spawn_Egg = registerItem("goobichthys_spawn_egg",
             new SpawnEggItem(ModEntities.GOOBICHTHYS, 0xab6518,0x3b260f, new FabricItemSettings()));
@@ -82,7 +83,7 @@ public class ModItems {
             new BattleAxeItem(ModToolMaterial.DAEDRIC,6,-3.2f, new FabricItemSettings()));
 
     public static final Item Daedric_Greatsword = registerItem("daedric_greatsword",
-            new SwordItem(ModToolMaterial.DAEDRIC,7,-3f, new FabricItemSettings()));
+            new GreatSwordItem(ModToolMaterial.DAEDRIC,7,-3f, new FabricItemSettings()));
 
     public static final Item Daedric_Hoe = registerItem("daedric_hoe",
             new HoeItem(ModToolMaterial.DAEDRIC,-3,0f, new FabricItemSettings()));
