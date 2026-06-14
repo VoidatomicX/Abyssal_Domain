@@ -21,10 +21,13 @@ import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+
+import java.util.UUID;
 
 public class Abyssal_domainClient implements ClientModInitializer {
 
@@ -64,16 +67,40 @@ public class Abyssal_domainClient implements ClientModInitializer {
         });
     }
 
+    private UUID borderPlayerUuid; // send this from server when creating border
 
 
     private void renderCircularBorder(ClientWorld world, MinecraftClient client) {
+        if (borderPlayerUuid != null) {
+            PlayerEntity player = world.getPlayerByUuid(borderPlayerUuid);
+
+            if (player == null || !player.isAlive()) {
+                borderCenter = null;
+                borderRadius = 0;
+                borderPlayerUuid = null;
+                return;
+            }
+        }
+
         int steps = 80;
+
         for (int i = 0; i < steps; i++) {
             double angle = 2 * Math.PI * i / steps;
-            double x = borderCenter.getX() + Math.cos(angle) * borderRadius + world.random.nextDouble() * 0.2;
-            double z = borderCenter.getZ() + Math.sin(angle) * borderRadius + world.random.nextDouble() * 0.2;
-            double y = borderCenter.getY() + 1.0 + world.random.nextDouble() * 2;
-            world.addParticle(ParticleTypes.ELECTRIC_SPARK, x, y, z, 0, 0.05, 0);
+
+            double x = borderCenter.getX() + Math.cos(angle) * borderRadius
+                    + world.random.nextDouble() * 0.2;
+
+            double z = borderCenter.getZ() + Math.sin(angle) * borderRadius
+                    + world.random.nextDouble() * 0.2;
+
+            double y = borderCenter.getY() + 1.0
+                    + world.random.nextDouble() * 2;
+
+            world.addParticle(
+                    ParticleTypes.ELECTRIC_SPARK,
+                    x, y, z,
+                    0, 0.05, 0
+            );
         }
     }
 }
