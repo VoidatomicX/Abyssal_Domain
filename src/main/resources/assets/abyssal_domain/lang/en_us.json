@@ -31,5 +31,7 @@
   "block.abyssal_domain.gilded_ruby_bars": "Corundum Bars ",
   "itemgroup.gilded": "Abyssal Domain",
 
+  "item.abyssal_domain.goobichthys_spawn_egg": "Goobichthys Spawn Egg",
+  "item.abyssal_domain.goob_bucket": "Bucket of Goobichthys",
   "entity.abyssal_domain.goobichthys": "Goobichthys"
 }
