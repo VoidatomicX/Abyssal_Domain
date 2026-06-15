@@ -23,7 +23,7 @@ public class ModLootTableModifiers {
             if(JUNGLE_TEMPLE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1f)) // Drops 100% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.50f)) // Drops 100% of the time
                         .with(ItemEntry.builder(ModItems.FAN_OF_UNYIELDING_WINDS))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
@@ -33,7 +33,7 @@ public class ModLootTableModifiers {
             if(DESERT_PYRAMID_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1f)) // Drops 100% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.25f)) // Drops 100% of the time
                         .with(ItemEntry.builder(ModItems.Terminus_Est))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
