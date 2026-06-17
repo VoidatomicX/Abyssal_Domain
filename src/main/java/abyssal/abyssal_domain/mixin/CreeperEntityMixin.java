@@ -6,6 +6,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.CreeperEntity;
+import net.minecraft.entity.projectile.SmallFireballEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.math.BlockPos;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,7 +19,7 @@ public abstract class CreeperEntityMixin {
 
     @Inject(method = "explode", at = @At("TAIL"))
     private void spawnRandomEffectCloud(CallbackInfo ci) {
-        CreeperEntity creeper = (CreeperEntity)(Object) this;
+        CreeperEntity creeper = (CreeperEntity) (Object) this;
 
         if (creeper.getWorld().isClient()) {
             return;
@@ -55,7 +56,7 @@ public abstract class CreeperEntityMixin {
             BlockPos center = creeper.getBlockPos();
 
             for (BlockPos pos : BlockPos.iterate(center.add(-2, -1, -2), center.add(2, 1, 2))) {
-                if (creeper.getRandom().nextFloat() < 0.3F
+                if (creeper.getRandom().nextFloat() < 0.5F
                         && creeper.getWorld().getBlockState(pos).isAir()
                         && Blocks.FIRE.getDefaultState().canPlaceAt(creeper.getWorld(), pos)) {
 
