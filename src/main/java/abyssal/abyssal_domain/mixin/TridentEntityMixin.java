@@ -1,4 +1,4 @@
-package abyssal.abyssal_domain.mixins;
+package abyssal.abyssal_domain.mixin;
 
 import abyssal.abyssal_domain.enchants.ModEnchantments;
 

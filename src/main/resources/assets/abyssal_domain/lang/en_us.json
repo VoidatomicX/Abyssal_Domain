@@ -10,16 +10,12 @@
   "item.abyssal_domain.gilded_ruby_shovel": "Gilded Ruby Shovel",
   "item.abyssal_domain.gilded_ruby_pickaxe": "Gilded Ruby Pickaxe",
 
-  "block.abyssal_domain.block_gilded_ruby": "Block of Gilded Ruby",
-  "block.abyssal_domain.chiseled_gilded_ruby_block": "Chiseled Gilded Ruby",
-  "block.abyssal_domain.gilded_ruby_bricks": "Gilded Ruby Bricks",
-  "block.abyssal_domain.gilded_block_ore": "Gilded Ore",
-  "block.abyssal_domain.deepslate_gilded_block_ore": "Deepslate Gilded Ore ",
-  "block.abyssal_domain.gilded_ruby_bars": "Gilded Ruby Bars ",
+  "itemgroup.gilded.items": "Abyssal Domain Items",
+  "itemgroup.gilded.blocks": "Abyssal Domain Items",
 
-  "itemgroup.gilded": "Abyssal Domain",
-
-  "enchantment.abyssal_domain.poison": "Poison"
+  "enchantment.abyssal_domain.poison": "Poison",
+  "enchantment.abyssal_domain.gust": "Gust",
+  "enchantment.abyssal_domain.targeting": "Targeting",
 
   "item.abyssal_domain.daedric_ingot": "Daedric Ingot",
   "item.abyssal_domain.raw_daedric": "Raw Daedric",
@@ -30,6 +26,11 @@
   "item.abyssal_domain.daedric_axe": "Daedric Axe",
   "item.abyssal_domain.daedric_shovel": "Daedric Shovel",
   "item.abyssal_domain.daedric_pickaxe": "Daedric Pickaxe",
+  "item.abyssal_domain.gilded_ruby_battleaxe": "Gilded Ruby Battleaxe",
+  "item.abyssal_domain.chain_of_judgment": "Chain of Judgment",
+  "item.abyssal_domain.grappling_hook": "Grappling Hook",
+  "item.abyssal_domain.oraxia": "Oraxia",
+  "item.abyssal_domain.voruna": "Voruna",
 
   "block.abyssal_domain.block_gilded_ruby": "Block of Corundum",
   "block.abyssal_domain.chiseled_gilded_ruby_block": "Chiseled Corundum",

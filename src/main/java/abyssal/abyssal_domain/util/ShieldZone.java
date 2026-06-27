@@ -1,11 +1,9 @@
 package abyssal.abyssal_domain.util;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
@@ -50,7 +48,7 @@ public class ShieldZone {
         double dx = pos.x - center.getX();
         double dz = pos.z - center.getZ();
         double dy = pos.y - center.getY();
-        return dx * dx + dz * dz <= radius * radius && dy >= 0 && dy <= height;
+        return dx * dx + dz * dz <= radius * radius && dy >= -1 && dy <= height;
     }
 
     public boolean containsPlayer(ServerPlayerEntity player) {
@@ -75,6 +73,7 @@ public class ShieldZone {
 
     public boolean shouldBlockEntity(Entity entity) {
         if (!active) return false;
+        if (!(entity instanceof ProjectileEntity)) return false;
         if (entity.getUuid().equals(caster) || entity.getUuid().equals(target)) return false;
         
         Vec3d pos = entity.getPos();
@@ -84,9 +83,7 @@ public class ShieldZone {
         
         if (distSq > radius * radius) {
             Vec3d vel = entity.getVelocity();
-            double velX = vel.x;
-            double velZ = vel.z;
-            double dot = dx * velX + dz * velZ;
+            double dot = dx * vel.x + dz * vel.z;
             if (dot > 0) {
                 return true;
             }
@@ -148,9 +145,4 @@ public class ShieldZone {
             net.minecraft.sound.SoundCategory.PLAYERS, 0.5f, 1.0f);
     }
 
-    public void onPlayerHit(ServerPlayerEntity caster) {
-        caster.getWorld().playSound(null, caster.getBlockPos(),
-            net.minecraft.sound.SoundEvents.BLOCK_STONE_HIT,
-            net.minecraft.sound.SoundCategory.PLAYERS, 0.3f, 1.0f);
-    }
 }

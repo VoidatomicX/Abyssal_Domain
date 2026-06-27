@@ -14,8 +14,11 @@ import net.minecraft.util.Identifier;
 import nightlib.bases.NightLibStoneSet;
 import nightlib.bases.NightLibWoodenSet;
 
-public class ModBlocks{
+import java.util.ArrayList;
+import java.util.List;
 
+public class ModBlocks{
+    public static final List<Block> ALL_BLOCKS = new ArrayList<>();
     public static final Block Gilded_Ruby_Bars = registerBlock("gilded_ruby_bars",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.NETHERITE).nonOpaque()));
 
@@ -115,6 +118,7 @@ public static final NightLibStoneSet CHISELED_GILDED_RUBY_BLOCK =
     }
 
     private static Block registerBlock(String name, Block block) {
+        ALL_BLOCKS.add(block);
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(Abyssal_domain.MOD_ID, name), block);
     }

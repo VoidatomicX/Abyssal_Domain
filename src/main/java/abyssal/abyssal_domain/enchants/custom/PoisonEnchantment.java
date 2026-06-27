@@ -3,11 +3,13 @@ package abyssal.abyssal_domain.enchants.custom;
 import abyssal.abyssal_domain.item.ModItems;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.Entity;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 
 public class PoisonEnchantment extends Enchantment {
 
@@ -20,8 +22,8 @@ public class PoisonEnchantment extends Enchantment {
     }
 
     @Override
-    public boolean isAcceptableItem(net.minecraft.item.ItemStack stack) {
-        return stack.isOf(ModItems.Scythe);
+    public boolean isAcceptableItem(ItemStack stack) {
+        return stack.getItem() instanceof SwordItem || stack.getItem() instanceof AxeItem;
     }
 
     @Override
@@ -50,17 +52,14 @@ public class PoisonEnchantment extends Enchantment {
     }
 
     @Override
-    public void onTargetDamaged(LivingEntity user, Entity target, int level) {
+    public void onTargetDamaged(LivingEntity user, net.minecraft.entity.Entity target, int level) {
         if (target instanceof LivingEntity livingTarget) {
-
-            int duration = 40 + (level * 40); // 2s + scaling
+            int duration = 40 + (level * 40);
             int amplifier = level - 1;
-
             livingTarget.addStatusEffect(
                     new StatusEffectInstance(StatusEffects.POISON, duration, amplifier)
             );
         }
-
         super.onTargetDamaged(user, target, level);
     }
 }

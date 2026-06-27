@@ -1,4 +1,4 @@
-package abyssal.abyssal_domain.mixins;
+package abyssal.abyssal_domain.mixin;
 
 import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.ItemStack;

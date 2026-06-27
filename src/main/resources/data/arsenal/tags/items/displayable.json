@@ -3,7 +3,6 @@
   "values": [
     "abyssal_domain:gilded_ruby_sword",
     "abyssal_domain:gilded_ruby_battleaxe",
-    "abyssal_domain:gilded_ruby_greatsword",
     "abyssal_domain:gilded_ruby_axe",
     "abyssal_domain:gilded_ruby_pickaxe",
     "abyssal_domain:gilded_ruby_shovel",
@@ -11,6 +10,12 @@
     "abyssal_domain:fan_of_unyielding_winds",
     "abyssal_domain:terminus_est",
     "abyssal_domain:oraxia",
-    "abyssal_domain:voruna"
+    "abyssal_domain:voruna",
+    "abyssal_domain:scythe",
+    "abyssal_domain:daedric_sword",
+    "abyssal_domain:daedric_battleaxe",
+    "abyssal_domain:daedric_greatsword",
+    "abyssal_domain:chain_of_judgment",
+    "abyssal_domain:grappling_hook"
   ]
 }

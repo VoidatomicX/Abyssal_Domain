@@ -158,8 +158,6 @@ public class GrapplingHook extends Item {
         nbt.remove("HookPos");
         nbt.remove("HookedEntity");
         broadcastGrappleEnd(world, player);
-        
-        player.getItemCooldownManager().set((Item)stack.getItem(), 10);
     }
     
     private static void broadcastGrappleStart(World world, PlayerEntity player, BlockPos hookPos) {
@@ -181,10 +179,22 @@ public class GrapplingHook extends Item {
     private static void broadcastGrappleRelease(World world, PlayerEntity player) {
         if (!(world instanceof net.minecraft.server.world.ServerWorld serverWorld)) return;
         
+        ItemStack held = player.getMainHandStack();
+        if (!(held.getItem() instanceof GrapplingHook)) {
+            held = player.getOffHandStack();
+        }
+        NbtCompound nbt = held.getOrCreateNbt();
+        int hx = nbt.getInt("HookX");
+        int hy = nbt.getInt("HookY");
+        int hz = nbt.getInt("HookZ");
+        
         for (PlayerEntity nearby : serverWorld.getServer().getPlayerManager().getPlayerList()) {
             if (nearby.distanceTo(player) < 50) {
                 PacketByteBuf buf = PacketByteBufs.create();
                 buf.writeBoolean(true);
+                buf.writeInt(hx);
+                buf.writeInt(hy);
+                buf.writeInt(hz);
                 ServerPlayNetworking.send((ServerPlayerEntity) nearby, ModPackets.GRAPPLE_SWING, buf);
             }
         }

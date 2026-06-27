@@ -63,9 +63,10 @@ public class VorunaItem extends AbyssalTridentsItem {
 
         int blades = nbt.getInt("VorunaBlades");
         double radius = nbt.getInt("VorunaRadius") / 10.0;
-        double centerX = nbt.getDouble("VorunaCenterX");
-        double centerY = nbt.getDouble("VorunaCenterY");
-        double centerZ = nbt.getDouble("VorunaCenterZ");
+        
+        double centerX = player.getX();
+        double centerY = player.getY() + 1.2;
+        double centerZ = player.getZ();
 
         double angle = (DURATION - tick) * 0.18;
 
@@ -88,13 +89,13 @@ public class VorunaItem extends AbyssalTridentsItem {
 
         for (LivingEntity target : world.getEntitiesByClass(
                 LivingEntity.class,
-                player.getBoundingBox().expand(radius + 1.0),
+                player.getBoundingBox().expand(radius + 1.5),
                 e -> e != player && e.isAlive()
         )) {
             double dist = target.getPos().distanceTo(player.getPos());
-            if (dist < radius + 1.0) {
-                target.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 60, 0));
-                target.damage(world.getDamageSources().magic(), 2.0f);
+            if (dist < radius + 1.5 && tick % 8 == 0) {
+                target.damage(world.getDamageSources().magic(), 2.5f);
+                world.playSound(null, target.getBlockPos(), net.minecraft.sound.SoundEvents.ENTITY_PLAYER_ATTACK_SWEEP, net.minecraft.sound.SoundCategory.PLAYERS, 0.8f, 1.2f);
             }
         }
     }

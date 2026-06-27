@@ -98,14 +98,6 @@ public class ModItems {
 
 
 
-    public static final Item Oraxia = registerItem("oraxia",
-            new OraxiaItem(new FabricItemSettings()));
-
-    public static final Item Voruna = registerItem("voruna",
-            new VorunaItem( new FabricItemSettings()));
-
-
-
     public static final Item Goobichthys_Spawn_Egg = registerItem("goobichthys_spawn_egg",
             new SpawnEggItem(ModEntities.GOOBICHTHYS, 0xab6518,0x3b260f, new FabricItemSettings()));
 
@@ -131,10 +123,12 @@ public class ModItems {
     public static final Item Daedric_Pickaxe = registerItem("daedric_pickaxe",
             new PickaxeItem(ModToolMaterial.DAEDRIC,-2,-2.8f, new FabricItemSettings()));
 
+    public static final Item Gilded_Ruby_Greatsword = registerItem("gilded_ruby_greatsword",
+            new GreatSwordItem(ModToolMaterial.GILDEDRUBY,5,-3f, new FabricItemSettings()));
 
 
 
-private static Item registerItem(String name, Item item) {
+    private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, new Identifier(Abyssal_domain.MOD_ID, name), item);
 }
 

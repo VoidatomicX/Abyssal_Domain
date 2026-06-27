@@ -8,6 +8,7 @@ import abyssal.abyssal_domain.entity.animation.GoobichthysAnimations;
 import abyssal.abyssal_domain.entity.custom.GoobichthysEntity;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 
@@ -44,11 +45,14 @@ public class GoobichthyModel<T extends GoobichthysEntity> extends SinglePartEnti
 
 	}
 
-
+	public void newanimate(Animation animation){
+		this.animate(animation);
+	}
 
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
 		body.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+
 	}
 
 	@Override

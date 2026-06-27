@@ -1,9 +1,12 @@
 package abyssal.abyssal_domain.mixin;
 
+import abyssal.abyssal_domain.entity.custom.TerminusShieldEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.mob.CreeperEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -17,21 +20,28 @@ public class LivingEntityMixin {
 
         LivingEntity entity = (LivingEntity)(Object) this;
 
-        if (!(entity instanceof CreeperEntity creeper)) return;
-
-        // only care about explosions
-        if (!source.isOf(DamageTypes.EXPLOSION) &&
-                !source.isOf(DamageTypes.PLAYER_EXPLOSION)) {
+        if (entity instanceof CreeperEntity creeper) {
+            if (!source.isOf(DamageTypes.EXPLOSION) && !source.isOf(DamageTypes.PLAYER_EXPLOSION)) {
+                return;
+            }
+            cir.setReturnValue(false);
+            if (!creeper.getWorld().isClient()) {
+                if (!creeper.isIgnited()) {
+                    creeper.ignite();
+                }
+            }
             return;
         }
 
-        // 🚫 cancel damage so creeper never dies from explosions
-        cir.setReturnValue(false);
-
-        // 💥 BUT still trigger chain reaction
-        if (!creeper.getWorld().isClient()) {
-            if (!creeper.isIgnited()) {
-                creeper.ignite(); // makes it start its fuse
+        if (entity instanceof PlayerEntity player && !player.getWorld().isClient()) {
+            for (Entity e : player.getWorld().getOtherEntities(player, player.getBoundingBox().expand(4.0))) {
+                if (e instanceof TerminusShieldEntity shield && shield.getOwnerUuid() != null && shield.getOwnerUuid().equals(player.getUuid())) {
+                    if (shield.tryBlockDamage(amount)) {
+                        cir.setReturnValue(false);
+                        shield.getWorld().playSound(null, shield.getBlockPos(), net.minecraft.sound.SoundEvents.BLOCK_ANVIL_PLACE, net.minecraft.sound.SoundCategory.PLAYERS, 0.5f, 1.5f);
+                        return;
+                    }
+                }
             }
         }
     }

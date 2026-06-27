@@ -47,6 +47,12 @@ public class ModPackets {
     public static final Identifier FROZEN_PROJECTILE =
             new Identifier("abyssal_domain", "frozen_projectile");
 
+    public static final Identifier SHADER_EFFECT =
+            new Identifier("abyssal_domain", "shader_effect");
+    
+    public static final Identifier SHADER_WORLD_EFFECT =
+            new Identifier("abyssal_domain", "shader_world_effect");
+
     public static void sendShieldPacket(ServerPlayerEntity player, BlockPos center, int radius, int height) {
         PacketByteBuf buf = PacketByteBufs.create();
         buf.writeInt(center.getX());
@@ -82,5 +88,19 @@ public class ModPackets {
         buf.writeInt(y);
         buf.writeInt(z);
         ServerPlayNetworking.send(player, FROZEN_PROJECTILE, buf);
+    }
+    
+    public static void sendShaderEffect(ServerPlayerEntity player, String shaderName) {
+        PacketByteBuf buf = PacketByteBufs.create();
+        buf.writeString(shaderName);
+        ServerPlayNetworking.send(player, SHADER_EFFECT, buf);
+    }
+    
+    public static void sendShaderWorldEffect(ServerPlayerEntity player, double x, double y, double z) {
+        PacketByteBuf buf = PacketByteBufs.create();
+        buf.writeDouble(x);
+        buf.writeDouble(y);
+        buf.writeDouble(z);
+        ServerPlayNetworking.send(player, SHADER_WORLD_EFFECT, buf);
     }
 }
