@@ -1,5 +1,9 @@
 package abyssal.abyssal_domain.item.custom.trident;
 
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+
 import abyssal.abyssal_domain.enchants.ModEnchantments;
 import abyssal.abyssal_domain.entity.ModEntities;
 import abyssal.abyssal_domain.entity.custom.HomingProjectile;
@@ -7,13 +11,10 @@ import abyssal.abyssal_domain.entity.custom.MirrorTridentEntity;
 
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.entity.projectile.ProjectileUtil;
-import net.minecraft.world.World;
 
 import java.util.Random;
 

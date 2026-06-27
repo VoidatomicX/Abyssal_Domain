@@ -45,7 +45,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation(files("./libs/nightlib-0.0.3.jar"))
 
-    include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:2.5.0")
+    include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:2.4.0")
 
     modImplementation("software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}")
     implementation("com.eliotlash.mclib:mclib:20")

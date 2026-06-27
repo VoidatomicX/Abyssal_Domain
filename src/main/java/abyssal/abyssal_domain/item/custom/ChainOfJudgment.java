@@ -25,7 +25,7 @@ import java.util.UUID;
 
 public class ChainOfJudgment extends SwordItem {
 
-    private static final int COOLDOWN_TICKS = 6000;
+    private static final int COOLDOWN_TICKS = 0;
     private static final int CHANNEL_DURATION = 180;
     private static final float INSTAKILL_HEIGHT = 20f;
     private static final double ZONE_RADIUS = 15.0;
