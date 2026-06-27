@@ -10,5 +10,9 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.Gilded_Ore_Placed_Key);
 
+         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.Daedric_Ore_Placed_Key);
+
+
     }
 }

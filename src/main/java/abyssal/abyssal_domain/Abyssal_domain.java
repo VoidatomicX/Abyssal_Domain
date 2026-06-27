@@ -2,12 +2,14 @@ package abyssal.abyssal_domain;
 
 import abyssal.abyssal_domain.block.ModBlocks;
 import abyssal.abyssal_domain.enchants.ModEnchantments;
+import abyssal.abyssal_domain.effect.ModEffects;
 import abyssal.abyssal_domain.entity.ModEntities;
 import abyssal.abyssal_domain.entity.custom.GoobichthysEntity;
 import abyssal.abyssal_domain.item.ModItemGroups;
 import abyssal.abyssal_domain.item.ModItems;
 import abyssal.abyssal_domain.item.custom.GrapplingHook;
 import abyssal.abyssal_domain.util.BorderZoneManager;
+import abyssal.abyssal_domain.util.ModLootTableModifiers;
 import abyssal.abyssal_domain.util.ShieldZoneManager;
 import abyssal.abyssal_domain.util.ModSpawns;
 import abyssal.abyssal_domain.world.gen.ModWorldGeneration;
@@ -34,6 +36,8 @@ public class Abyssal_domain implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModSpawns.register();
+        ModLootTableModifiers.modifyLootTables();
+        ModEffects.registerEffects();
 
 
 
@@ -42,11 +46,11 @@ public class Abyssal_domain implements ModInitializer {
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             BorderZoneManager.tick(server);
         });
-        
+
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             ShieldZoneManager.tick(server);
         });
-        
+
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             server.getPlayerManager().getPlayerList().forEach(player -> {
                 for (int i = 0; i < player.getInventory().size(); i++) {

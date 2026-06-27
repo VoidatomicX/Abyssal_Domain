@@ -19,12 +19,12 @@ public class AbyssaldomainDataGenerator implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator generator) {
         FabricDataGenerator.Pack pack = generator.createPack();
 
-        pack.addProvider(CombinedBlockTagProvider::new);
         pack.addProvider(CombinedModelProvider::new);
         pack.addProvider(ModItemTagProvider::new);
         pack.addProvider(ModLootTableProvider::new);
         pack.addProvider(ModRecipeProvider::new);
         pack.addProvider(ModWorldGenerator::new);
+        pack.addProvider(ModBlockTagProvider::new);
 
     }
     public void buildRegistry(RegistryBuilder registryBuilder) {

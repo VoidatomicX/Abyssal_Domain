@@ -20,16 +20,22 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> Gilded_Ruby_Key = registerKey("gilded_ruby_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> Daedric_Ore_Key = registerKey("daedric_ore");
 
     public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplacables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplacables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest netherReplacables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
 
         List<OreFeatureConfig.Target> overworldGildedRubyOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.Gilded_Block_Ore.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.Deepslate_Gilded_Block_Ore.getDefaultState()));
 
+        List<OreFeatureConfig.Target> netherDaedricOre =
+                List.of(OreFeatureConfig.createTarget(netherReplacables, ModBlocks.Daedric_ore.getDefaultState()));
+
         register(context, Gilded_Ruby_Key, Feature.ORE, new OreFeatureConfig(overworldGildedRubyOres, 12));
+        register(context, Daedric_Ore_Key, Feature.ORE, new OreFeatureConfig(netherDaedricOre, 12));
 
     }
 

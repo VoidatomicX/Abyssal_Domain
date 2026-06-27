@@ -21,4 +21,26 @@
 
   "enchantment.abyssal_domain.poison": "Poison"
 
+  "item.abyssal_domain.daedric_ingot": "Daedric Ingot",
+  "item.abyssal_domain.raw_daedric": "Raw Daedric",
+  "item.abyssal_domain.daedric_battleaxe": "Daedric Battleaxe",
+  "item.abyssal_domain.daedric_greatsword": "Daedric Greatsword",
+  "item.abyssal_domain.daedric_sword": "Daedric Sword",
+  "item.abyssal_domain.daedric_hoe": "Daedric Hoe",
+  "item.abyssal_domain.daedric_axe": "Daedric Axe",
+  "item.abyssal_domain.daedric_shovel": "Daedric Shovel",
+  "item.abyssal_domain.daedric_pickaxe": "Daedric Pickaxe",
+
+  "block.abyssal_domain.block_gilded_ruby": "Block of Corundum",
+  "block.abyssal_domain.chiseled_gilded_ruby_block": "Chiseled Corundum",
+  "block.abyssal_domain.gilded_ruby_bricks": "Corundum Bricks",
+  "block.abyssal_domain.gilded_block_ore": "Corundum Ore",
+  "block.abyssal_domain.daedric_ore": "Nether Daedric Ore",
+  "block.abyssal_domain.deepslate_gilded_block_ore": "Deepslate Corundum Ore ",
+  "block.abyssal_domain.gilded_ruby_bars": "Corundum Bars ",
+  "itemgroup.gilded": "Abyssal Domain",
+
+  "item.abyssal_domain.goobichthys_spawn_egg": "Goobichthys Spawn Egg",
+  "item.abyssal_domain.goob_bucket": "Bucket of Goobichthys",
+  "entity.abyssal_domain.goobichthys": "Goobichthys"
 }

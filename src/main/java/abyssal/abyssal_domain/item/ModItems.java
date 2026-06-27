@@ -6,10 +6,14 @@ import abyssal.abyssal_domain.item.custom.*;
 import abyssal.abyssal_domain.item.custom.trident.OraxiaItem;
 import abyssal.abyssal_domain.item.custom.trident.VorunaItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+
+import static abyssal.abyssal_domain.Abyssal_domain.MOD_ID;
 
 public class ModItems {
 
@@ -18,8 +22,10 @@ public class ModItems {
     public static final Item Raw_Gilded_Ruby = registerItem("raw_gilded_ruby",
             new Item(new FabricItemSettings()));
 
-    public static final Item PARTICLE_SWITCHER = registerItem("particle_switcher",
-            new ParticleSwitcher(new FabricItemSettings()));
+    public static final Item Daedric_Ingot = registerItem("daedric_ingot",
+            new Item(new FabricItemSettings()));
+    public static final Item Raw_Daedric = registerItem("raw_daedric",
+            new Item(new FabricItemSettings()));
 
     //public static final TestGlint GREEN_GLINT =
        //     (TestGlint) registerItem("green_glint",
@@ -35,8 +41,13 @@ public class ModItems {
 
     public static final Item GOOB_BUCKET = Registry.register(
             Registries.ITEM,
-            new Identifier(Abyssal_domain.MOD_ID,"goob_bucket"),
-            new GoobBucketItem(new Item.Settings().maxCount(1))
+            new Identifier(MOD_ID, "goob_bucket"),
+            new EntityBucketItem(
+                    ModEntities.GOOBICHTHYS,
+                    Fluids.LAVA,
+                    SoundEvents.ITEM_BUCKET_EMPTY_LAVA,
+                    new Item.Settings().maxCount(1)
+            )
     );
 
     public static final Item FAN_OF_UNYIELDING_WINDS = registerItem(
@@ -50,11 +61,16 @@ public class ModItems {
             "terminus_est",
             new Terminus_Est(ToolMaterials.NETHERITE,5,-3.3f, new FabricItemSettings()));
 
+
+
     public static final Item Gilded_Ruby_Sword = registerItem("gilded_ruby_sword",
-            new SwordItem(ToolMaterials.NETHERITE,4,-2.4f, new FabricItemSettings()));
+            new SwordItem(ModToolMaterial.GILDEDRUBY,3,-2.4f, new FabricItemSettings()));
 
     public static final Item Scythe = registerItem("scythe",
             new Scythe(ToolMaterials.NETHERITE,4,-2.4f, new FabricItemSettings()));
+
+    public static final Item Gilded_Ruby_Battleaxe = registerItem("gilded_ruby_battleaxe",
+            new BattleAxeItem(ModToolMaterial.GILDEDRUBY,6,-3.2f, new FabricItemSettings()));
 
     public static final Item Oraxia = registerItem("oraxia",
             new OraxiaItem(new FabricItemSettings().maxCount(1)));
@@ -80,8 +96,41 @@ public class ModItems {
     public static final Item Gilded_Ruby_Pickaxe = registerItem("gilded_ruby_pickaxe",
             new PickaxeItem(ModToolMaterial.GILDEDRUBY,1,-2.8f, new FabricItemSettings()));
 
+
+
+    public static final Item Oraxia = registerItem("oraxia",
+            new OraxiaItem(new FabricItemSettings()));
+
+    public static final Item Voruna = registerItem("voruna",
+            new VorunaItem( new FabricItemSettings()));
+
+
+
     public static final Item Goobichthys_Spawn_Egg = registerItem("goobichthys_spawn_egg",
             new SpawnEggItem(ModEntities.GOOBICHTHYS, 0xab6518,0x3b260f, new FabricItemSettings()));
+
+
+    public static final Item Daedric_Sword = registerItem("daedric_sword",
+            new SwordItem(ModToolMaterial.DAEDRIC,3,-2.4f, new FabricItemSettings()));
+
+    public static final Item Daedric_Battleaxe = registerItem("daedric_battleaxe",
+            new BattleAxeItem(ModToolMaterial.DAEDRIC,5,-3.2f, new FabricItemSettings()));
+
+    public static final Item Daedric_Greatsword = registerItem("daedric_greatsword",
+            new GreatSwordItem(ModToolMaterial.DAEDRIC,5,-3f, new FabricItemSettings()));
+
+    public static final Item Daedric_Hoe = registerItem("daedric_hoe",
+            new HoeItem(ModToolMaterial.DAEDRIC,-3,0f, new FabricItemSettings()));
+
+    public static final Item Daedric_Axe = registerItem("daedric_axe",
+            new AxeItem(ModToolMaterial.DAEDRIC,-4,-2.9f, new FabricItemSettings()));
+
+    public static final Item Daedric_Shovel = registerItem("daedric_shovel",
+            new ShovelItem(ModToolMaterial.DAEDRIC,-1,-3f, new FabricItemSettings()));
+
+    public static final Item Daedric_Pickaxe = registerItem("daedric_pickaxe",
+            new PickaxeItem(ModToolMaterial.DAEDRIC,-2,-2.8f, new FabricItemSettings()));
+
 
 
 

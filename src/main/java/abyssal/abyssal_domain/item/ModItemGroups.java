@@ -28,7 +28,9 @@ public class ModItemGroups {
 
                         ModBlocks.BLOCK_GILDED_RUBY.addAllBlocksToEntries(entries);
 
-                        ModBlocks.GILDED_RUBY_BRICKS.addAllBlocksToEntries(entries);
+                    ModBlocks.DAEDRIC_BLOCK.addAllBlocksToEntries(entries);
+
+                    ModBlocks.GILDED_RUBY_BRICKS.addAllBlocksToEntries(entries);
 
                         ModBlocks.CHISELED_GILDED_RUBY_BLOCK.addAllBlocksToEntries(entries);
 

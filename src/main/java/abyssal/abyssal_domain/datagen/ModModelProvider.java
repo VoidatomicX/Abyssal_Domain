@@ -40,6 +40,14 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.Gilded_Ruby_Hoe, Models.HANDHELD);
         itemModelGenerator.register(ModItems.Gilded_Ruby_Shovel, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.Daedric_Ingot, Models.GENERATED);
+        itemModelGenerator.register(ModItems.Raw_Daedric, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.Daedric_Pickaxe, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.Daedric_Axe, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.Daedric_Hoe, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.Daedric_Shovel, Models.HANDHELD);
+
         itemModelGenerator.register(ModItems.Goobichthys_Spawn_Egg,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }

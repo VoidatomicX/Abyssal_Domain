@@ -25,6 +25,9 @@ public class ModBlocks{
     public static final Block Gilded_Block_Ore = registerBlock("gilded_block_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.STONE)));
 
+    public static final Block Daedric_ore = registerBlock("daedric_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.NETHER_ORE)));
+
 
 
 //Crêpe Myrtle Tree
@@ -64,6 +67,15 @@ public class ModBlocks{
         new NightLibStoneSet(
                 "abyssal_domain",
                 "block_gilded_ruby",
+                FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK),
+                BlockSetType.STONE
+        );
+
+
+    public static final NightLibStoneSet DAEDRIC_BLOCK =
+        new NightLibStoneSet(
+                "abyssal_domain",
+                "daedric_block",
                 FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK),
                 BlockSetType.STONE
         );

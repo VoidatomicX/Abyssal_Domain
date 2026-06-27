@@ -7,6 +7,8 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 
+import static abyssal.abyssal_domain.Abyssal_domain.MOD_ID;
+
 public class ModPackets {
 
     public static final Identifier FAKE_BORDER =
